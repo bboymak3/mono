@@ -1,0 +1,5 @@
+# Forzar redirección de la URL vieja a la nueva (si aplica)
+https://monocromatico.pages.dev/* https://tapizadodevolantes.pages.dev/:splat 301
+
+# Asegurar que siempre cargue el index.html
+/* /index.html  200

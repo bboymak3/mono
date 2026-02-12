@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Allow: /images/
+
+# Keywords para el bot: tapizado de volantes santiago, tapizar volante precio
+Sitemap: https://tapizadodevolantes.pages.dev/sitemap.xml
