@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
   <url>
     <loc>https://tapizadodevolantes.pages.dev/</loc>
-    <lastmod>2026-02-12</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    
     <image:image>
       <image:loc>https://tapizadodevolantes.pages.dev/images/kit-tapizado-volante-restauracion-volantes-en-santiago-monocromatico.jpg</image:loc>
-      <image:title>Tapizado de Volantes Santiago El Mono Cromático</image:title>
+      <image:title>Tapizado de Volantes Santiago - El Mono Cromático</image:title>
+      <image:caption>Servicio profesional de restauración de volantes a domicilio en Santiago.</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://tapizadodevolantes.pages.dev/images/tapizado-volante-bmw-tapizado-volante-bmw-e46-e90-en-santiago-monocromatico.jpg</image:loc>
+      <image:title>Tapizado Volante BMW E46 E90 en Santiago</image:title>
     </image:image>
   </url>
+
 </urlset>

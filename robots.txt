@@ -2,5 +2,8 @@ User-agent: *
 Allow: /
 Allow: /images/
 
-# Keywords para el bot: tapizado de volantes santiago, tapizar volante precio
+# Evitar rastreo de carpetas técnicas de Cloudflare si existen
+Disallow: /cdn-cgi/
+
+# Indicar la ruta del mapa del sitio para todos los buscadores
 Sitemap: https://tapizadodevolantes.pages.dev/sitemap.xml
