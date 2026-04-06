@@ -7,8 +7,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Tapizado de Volantes Santiago | Restauración Premium a Domicilio</title>
-    <meta name="description" content="Especialistas en tapizado de volantes en Santiago. Servicio a domicilio en Buin, Colina, Estación Central y toda la RM. Forrar volante de cuero y alcantara con El Mono Cromático.">
+    <title>Tapizado de Volantes en Santiago | Restauración Premium a Domicilio</title>
+    <meta name="description" content="Especialistas en tapizado de volantes en Santiago. Servicio a domicilio en Buin, Colina, Estación Central y toda la RM. Forrar volante de cuero y alcantara.">
     <meta name="keywords" content="tapizado de volantes, tapizar volante precio, tapizar volante, tapizar volante coche, cuero para tapizar volante, forrar un volante con cuero, forrar volante alcantara, forrar volante coche, forrar volante de coche, forrar volante de cuero, forrar volante en cuero, forrar volante en piel, forrar volantes de piel, kit tapizado volante, ortecon tapizados, ortecon volantes, piel para tapizar volante, precio tapizado volante coche, precio tapizado volante cuero, precio tapizado volante de coche, restauracion volantes, tapiceria de volantes, tapiceria de volantes de autos, tapiceria para volantes de autos, tapiceria volante, tapiceria volante de auto, tapiceria volantes, tapicero de volantes de autos, tapiceros de volantes de coche, tapizado cuero volante, tapizado de cuero para volantes, tapizado de volante de auto, tapizado de volante de coche, tapizado de volante de cuero, tapizado de volante en piel, tapizado de volantes para autos, tapizado de volantes precio, tapizado de volantes warnes, tapizado de volantes zona norte, tapizado de volantes zona oeste, tapizado de volantes zona sur, tapizado para volante, tapizado timon de auto, tapizado volante alcantara, tapizado volante bmw, tapizado volante bmw e46, tapizado volante bmw e90, tapizado volante cuero, tapizar timon cuero, tapizar un volante de coche, tapizar volante alcantara precio, tapizar volante citroen c4, tapizar volante coche precio, tapizar volante e46, tapizar volante en alcantara, tapizar volante en piel, tapizar volante mercedes, tapizar volante mercedes w211, tapizar volante peugeot 206, tapizar volante peugeot 308, tapizar volante piel vuelta, tapizar volante seat leon 2, tapizar volante sin desmontar, volante bmw tapizado, volante tapizado bmw e46, volante tapizado piel">
     
     <link rel="canonical" href="https://tapizadodevolantes.pages.dev/">
@@ -32,6 +32,17 @@
         img.h-full.object-cover {
             min-height: 100%;
         }
+        /* Vibration effect */
+        @keyframes vibrate {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-2px); }
+            50% { transform: translateX(2px); }
+            75% { transform: translateX(-2px); }
+            100% { transform: translateX(0); }
+        }
+        .vibrate:hover {
+            animation: vibrate 0.5s ease-in-out;
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-900 font-sans flex flex-col min-h-screen">
@@ -54,7 +65,7 @@
                 TAPIZADO DE VOLANTES <span class="text-yellow-500 block md:inline">EN SANTIAGO</span>
             </h1>
             <p class="text-xl md:text-2xl mb-10 text-gray-300 italic font-medium leading-relaxed">
-                Renueva tu conducción con <strong>El Mono Cromático</strong>. Especialistas en <strong>forrar volante de cuero</strong>, alcantara y restauración profesional a domicilio en toda la Región Metropolitana.
+                Renueva tu conducción con <strong>Tapizado de Volantes en Santiago</strong>. Especialistas en <strong>forrar volante de cuero</strong>, alcantara y restauración profesional a domicilio en toda la Región Metropolitana.
             </p>
             <div class="flex flex-col md:flex-row justify-center gap-4 text-white">
                 <a href="https://wa.me/56992537569" class="bg-yellow-500 text-black px-10 py-4 rounded font-black text-lg hover:scale-105 transition shadow-2xl uppercase">Cotizar a Domicilio</a>
@@ -299,11 +310,40 @@
         </div>
     </section>
 
+    <!-- CONTACT BUTTONS SECTION -->
+    <section class="py-16 bg-white text-center">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-center items-center gap-4">
+                <a href="tel:992537569" class="bg-blue-500 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-600 transition vibrate shadow-lg">
+                    <i class="fas fa-phone mr-2"></i>Llamar
+                </a>
+                <div class="bg-yellow-500 text-black px-6 py-4 rounded-full font-bold text-lg shadow-lg">
+                    <i class="fas fa-star"></i>
+                </div>
+                <a href="https://wa.me/56992537569" class="bg-green-500 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-green-600 transition vibrate shadow-lg">
+                    <i class="fab fa-whatsapp mr-2"></i>WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- MECANICO A DOMICILIO SECTION -->
+    <section class="py-16 bg-gray-900 text-white text-center">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-black mb-6 uppercase italic">MECANICO A DOMICILIO</h2>
+            <p class="text-xl mb-10 text-gray-300 italic font-medium leading-relaxed">
+                GLOBAL PRO AUTOMOTRIS<br>
+                Si necesitas un mecánico a domicilio, puedes visitar el siguiente enlace
+            </p>
+            <a href="https://mecanico247.com/" class="bg-yellow-500 text-black px-10 py-4 rounded font-black text-lg hover:scale-105 transition shadow-2xl uppercase">Visitar Sitio</a>
+        </div>
+    </section>
+
     <footer class="bg-black text-white py-12 text-center border-t border-yellow-500/20">
         <div class="container mx-auto px-4">
             <img src="images/tapizado-de-volantes-santiago-chile-serca-de-mi.png" alt="Logo Footer Tapizado" class="h-16 mx-auto mb-6">
             <p class="font-black text-yellow-500 mb-2 text-xl italic uppercase">TAPIZADODEVOLANTES.PAGES.DEV</p>
-            <p class="text-sm text-gray-500 uppercase tracking-widest mb-8 font-bold">El Mono Cromático | Especialistas en Volantes y Personalización</p>
+            <p class="text-sm text-gray-500 uppercase tracking-widest mb-8 font-bold">Tapizado de Volantes en Santiago | Especialistas en Volantes y Personalización</p>
             <div class="grid md:grid-cols-2 gap-4 max-w-2xl mx-auto text-gray-300">
                 <p><i class="fab fa-whatsapp text-yellow-500 mr-2"></i> +56 9 9253 7569</p>
                 <p><i class="fas fa-map-marker-alt text-yellow-500 mr-2"></i> Padre Alberto Hurtado 3598, PAC, Santiago.</p>
@@ -313,10 +353,6 @@
             </div>
         </div>
     </footer>
-
-    <a href="https://wa.me/56992537569" class="fixed bottom-6 right-6 bg-green-500 p-4 rounded-full shadow-2xl hover:scale-110 transition z-40 animate-bounce">
-        <i class="fab fa-whatsapp text-white text-4xl"></i>
-    </a>
 
     <!-- MODAL PARA VISUALIZAR IMÁGENES -->
     <div id="imageModal" class="fixed inset-0 z-[60] bg-black/90 hidden justify-center items-center transition-opacity duration-300">
