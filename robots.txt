@@ -6,4 +6,4 @@ Allow: /images/
 Disallow: /cdn-cgi/
 
 # Indicar la ruta del mapa del sitio para todos los buscadores
-Sitemap: https://tapizadodevolantes.pages.dev/sitemap.xml
+Sitemap: https://tapizadodevolante.com/sitemap.xml
