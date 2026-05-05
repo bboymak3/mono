@@ -122,6 +122,8 @@
         /* Vehicle card */
         .vehicle-card { transition: all 0.3s; }
         .vehicle-card:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(0,0,0,0.15); }
+        .vehicle-card-col { scroll-margin-top: 80px; }
+        .vehicle-card-col.highlight-target .vehicle-card { box-shadow: 0 0 0 3px #EAB308, 0 12px 24px rgba(234,179,8,0.3); transform: translateY(-4px); }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-900 font-poppins flex flex-col min-h-screen pb-20">
@@ -500,201 +502,339 @@
         <div class="container mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-black text-center mb-4 uppercase italic text-yellow-500">Trabajamos con Todas las Marcas de Vehículos</h2>
             <p class="text-center text-gray-300 mb-12 max-w-3xl mx-auto">En <strong class="text-yellow-400">Mono Cromático</strong> realizamos <strong>tapizado de volantes</strong> para todas las marcas y modelos. Desde autos compactos hasta SUV premium, cada <strong>volante personalizado</strong> recibe un tratamiento artesanal de primera calidad.</p>
+
+            <!-- LISTA DE MARCAS Y VEHICULOS -->
+            <div class="max-w-6xl mx-auto mb-12">
+                <div class="bg-gray-800/50 rounded-2xl p-6 md:p-8 border border-gray-700">
+                    <h3 class="text-xl md:text-2xl font-black text-yellow-500 uppercase italic text-center mb-6"><i class="fas fa-list-ul mr-2"></i>Todas las Marcas y Modelos Disponibles</h3>
+                    <p class="text-gray-400 text-center text-sm mb-8">Haz clic en cualquier vehiculo para ver su ficha completa con imagen</p>
+                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-3">
+                        <!-- CHEVROLET -->
+                        <div>
+                            <h4 class="font-black text-yellow-400 text-sm mb-2 uppercase tracking-wider">Chevrolet</h4>
+                            <ul class="space-y-1.5">
+                                <li><a href="#vehiculo-chevrolet-sonic" onclick="scrollToVehicle('vehiculo-chevrolet-sonic');return false;"" class="text-gray-300 hover:text-yellow-500 text-sm transition flex items-center gap-2"><i class="fas fa-chevron-right text-[8px] text-yellow-600"></i>Sonic</a></li>
+                                <li><a href="#vehiculo-chevrolet-spark" onclick="scrollToVehicle('vehiculo-chevrolet-spark');return false;"" class="text-gray-300 hover:text-yellow-500 text-sm transition flex items-center gap-2"><i class="fas fa-chevron-right text-[8px] text-yellow-600"></i>Spark</a></li>
+                                <li><a href="#vehiculo-chevrolet-sail" onclick="scrollToVehicle('vehiculo-chevrolet-sail');return false;"" class="text-gray-300 hover:text-yellow-500 text-sm transition flex items-center gap-2"><i class="fas fa-chevron-right text-[8px] text-yellow-600"></i>Sail</a></li>
+                            </ul>
+                        </div>
+                        <!-- FIAT -->
+                        <div>
+                            <h4 class="font-black text-yellow-400 text-sm mb-2 uppercase tracking-wider">Fiat</h4>
+                            <ul class="space-y-1.5">
+                                <li><a href="#vehiculo-fiat-bravo" onclick="scrollToVehicle('vehiculo-fiat-bravo');return false;"" class="text-gray-300 hover:text-yellow-500 text-sm transition flex items-center gap-2"><i class="fas fa-chevron-right text-[8px] text-yellow-600"></i>Bravo T-Jet</a></li>
+                            </ul>
+                        </div>
+                        <!-- FORD -->
+                        <div>
+                            <h4 class="font-black text-yellow-400 text-sm mb-2 uppercase tracking-wider">Ford</h4>
+                            <ul class="space-y-1.5">
+                                <li><a href="#vehiculo-ford-fiesta" onclick="scrollToVehicle('vehiculo-ford-fiesta');return false;"" class="text-gray-300 hover:text-yellow-500 text-sm transition flex items-center gap-2"><i class="fas fa-chevron-right text-[8px] text-yellow-600"></i>Fiesta</a></li>
+                                <li><a href="#vehiculo-ford-ecosport" onclick="scrollToVehicle('vehiculo-ford-ecosport');return false;"" class="text-gray-300 hover:text-yellow-500 text-sm transition flex items-center gap-2"><i class="fas fa-chevron-right text-[8px] text-yellow-600"></i>EcoSport</a></li>
+                            </ul>
+                        </div>
+                        <!-- HONDA -->
+                        <div>
+                            <h4 class="font-black text-yellow-400 text-sm mb-2 uppercase tracking-wider">Honda</h4>
+                            <ul class="space-y-1.5">
+                                <li><a href="#vehiculo-honda-city" onclick="scrollToVehicle('vehiculo-honda-city');return false;"" class="text-gray-300 hover:text-yellow-500 text-sm transition flex items-center gap-2"><i class="fas fa-chevron-right text-[8px] text-yellow-600"></i>City</a></li>
+                                <li><a href="#vehiculo-honda-civic" onclick="scrollToVehicle('vehiculo-honda-civic');return false;"" class="text-gray-300 hover:text-yellow-500 text-sm transition flex items-center gap-2"><i class="fas fa-chevron-right text-[8px] text-yellow-600"></i>Civic</a></li>
+                                <li><a href="#vehiculo-honda-cr-v" onclick="scrollToVehicle('vehiculo-honda-cr-v');return false;"" class="text-gray-300 hover:text-yellow-500 text-sm transition flex items-center gap-2"><i class="fas fa-chevron-right text-[8px] text-yellow-600"></i>CR-V</a></li>
+                            </ul>
+                        </div>
+                        <!-- HYUNDAI -->
+                        <div>
+                            <h4 class="font-black text-yellow-400 text-sm mb-2 uppercase tracking-wider">Hyundai</h4>
+                            <ul class="space-y-1.5">
+                                <li><a href="#vehiculo-hyundai-grand-i10" onclick="scrollToVehicle('vehiculo-hyundai-grand-i10');return false;"" class="text-gray-300 hover:text-yellow-500 text-sm transition flex items-center gap-2"><i class="fas fa-chevron-right text-[8px] text-yellow-600"></i>Grand i10</a></li>
+                                <li><a href="#vehiculo-hyundai-accent" onclick="scrollToVehicle('vehiculo-hyundai-accent');return false;"" class="text-gray-300 hover:text-yellow-500 text-sm transition flex items-center gap-2"><i class="fas fa-chevron-right text-[8px] text-yellow-600"></i>Accent</a></li>
+                                <li><a href="#vehiculo-hyundai-tucson" onclick="scrollToVehicle('vehiculo-hyundai-tucson');return false;"" class="text-gray-300 hover:text-yellow-500 text-sm transition flex items-center gap-2"><i class="fas fa-chevron-right text-[8px] text-yellow-600"></i>Tucson</a></li>
+                            </ul>
+                        </div>
+                        <!-- KIA -->
+                        <div>
+                            <h4 class="font-black text-yellow-400 text-sm mb-2 uppercase tracking-wider">Kia</h4>
+                            <ul class="space-y-1.5">
+                                <li><a href="#vehiculo-kia-morning" onclick="scrollToVehicle('vehiculo-kia-morning');return false;"" class="text-gray-300 hover:text-yellow-500 text-sm transition flex items-center gap-2"><i class="fas fa-chevron-right text-[8px] text-yellow-600"></i>Morning</a></li>
+                                <li><a href="#vehiculo-kia-rio" onclick="scrollToVehicle('vehiculo-kia-rio');return false;"" class="text-gray-300 hover:text-yellow-500 text-sm transition flex items-center gap-2"><i class="fas fa-chevron-right text-[8px] text-yellow-600"></i>Rio</a></li>
+                            </ul>
+                        </div>
+                        <!-- MAZDA -->
+                        <div>
+                            <h4 class="font-black text-yellow-400 text-sm mb-2 uppercase tracking-wider">Mazda</h4>
+                            <ul class="space-y-1.5">
+                                <li><a href="#vehiculo-mazda-3" onclick="scrollToVehicle('vehiculo-mazda-3');return false;"" class="text-gray-300 hover:text-yellow-500 text-sm transition flex items-center gap-2"><i class="fas fa-chevron-right text-[8px] text-yellow-600"></i>Mazda 3</a></li>
+                                <li><a href="#vehiculo-mazda-cx-5" onclick="scrollToVehicle('vehiculo-mazda-cx-5');return false;"" class="text-gray-300 hover:text-yellow-500 text-sm transition flex items-center gap-2"><i class="fas fa-chevron-right text-[8px] text-yellow-600"></i>CX-5</a></li>
+                            </ul>
+                        </div>
+                        <!-- MG -->
+                        <div>
+                            <h4 class="font-black text-yellow-400 text-sm mb-2 uppercase tracking-wider">MG</h4>
+                            <ul class="space-y-1.5">
+                                <li><a href="#vehiculo-mg-3" onclick="scrollToVehicle('vehiculo-mg-3');return false;"" class="text-gray-300 hover:text-yellow-500 text-sm transition flex items-center gap-2"><i class="fas fa-chevron-right text-[8px] text-yellow-600"></i>MG 3</a></li>
+                                <li><a href="#vehiculo-mg-zs" onclick="scrollToVehicle('vehiculo-mg-zs');return false;"" class="text-gray-300 hover:text-yellow-500 text-sm transition flex items-center gap-2"><i class="fas fa-chevron-right text-[8px] text-yellow-600"></i>ZS</a></li>
+                            </ul>
+                        </div>
+                        <!-- NISSAN -->
+                        <div>
+                            <h4 class="font-black text-yellow-400 text-sm mb-2 uppercase tracking-wider">Nissan</h4>
+                            <ul class="space-y-1.5">
+                                <li><a href="#vehiculo-nissan-kicks" onclick="scrollToVehicle('vehiculo-nissan-kicks');return false;"" class="text-gray-300 hover:text-yellow-500 text-sm transition flex items-center gap-2"><i class="fas fa-chevron-right text-[8px] text-yellow-600"></i>Kicks</a></li>
+                                <li><a href="#vehiculo-nissan-versa" onclick="scrollToVehicle('vehiculo-nissan-versa');return false;"" class="text-gray-300 hover:text-yellow-500 text-sm transition flex items-center gap-2"><i class="fas fa-chevron-right text-[8px] text-yellow-600"></i>Versa</a></li>
+                            </ul>
+                        </div>
+                        <!-- PEUGEOT -->
+                        <div>
+                            <h4 class="font-black text-yellow-400 text-sm mb-2 uppercase tracking-wider">Peugeot</h4>
+                            <ul class="space-y-1.5">
+                                <li><a href="#vehiculo-peugeot-208" onclick="scrollToVehicle('vehiculo-peugeot-208');return false;"" class="text-gray-300 hover:text-yellow-500 text-sm transition flex items-center gap-2"><i class="fas fa-chevron-right text-[8px] text-yellow-600"></i>208</a></li>
+                                <li><a href="#vehiculo-peugeot-3008" onclick="scrollToVehicle('vehiculo-peugeot-3008');return false;"" class="text-gray-300 hover:text-yellow-500 text-sm transition flex items-center gap-2"><i class="fas fa-chevron-right text-[8px] text-yellow-600"></i>3008</a></li>
+                            </ul>
+                        </div>
+                        <!-- RENAULT -->
+                        <div>
+                            <h4 class="font-black text-yellow-400 text-sm mb-2 uppercase tracking-wider">Renault</h4>
+                            <ul class="space-y-1.5">
+                                <li><a href="#vehiculo-renault-duster" onclick="scrollToVehicle('vehiculo-renault-duster');return false;"" class="text-gray-300 hover:text-yellow-500 text-sm transition flex items-center gap-2"><i class="fas fa-chevron-right text-[8px] text-yellow-600"></i>Duster</a></li>
+                                <li><a href="#vehiculo-renault-logan" onclick="scrollToVehicle('vehiculo-renault-logan');return false;"" class="text-gray-300 hover:text-yellow-500 text-sm transition flex items-center gap-2"><i class="fas fa-chevron-right text-[8px] text-yellow-600"></i>Logan</a></li>
+                            </ul>
+                        </div>
+                        <!-- SUBARU -->
+                        <div>
+                            <h4 class="font-black text-yellow-400 text-sm mb-2 uppercase tracking-wider">Subaru</h4>
+                            <ul class="space-y-1.5">
+                                <li><a href="#vehiculo-subaru-forester" onclick="scrollToVehicle('vehiculo-subaru-forester');return false;"" class="text-gray-300 hover:text-yellow-500 text-sm transition flex items-center gap-2"><i class="fas fa-chevron-right text-[8px] text-yellow-600"></i>Forester</a></li>
+                                <li><a href="#vehiculo-subaru-xv" onclick="scrollToVehicle('vehiculo-subaru-xv');return false;"" class="text-gray-300 hover:text-yellow-500 text-sm transition flex items-center gap-2"><i class="fas fa-chevron-right text-[8px] text-yellow-600"></i>XV</a></li>
+                            </ul>
+                        </div>
+                        <!-- SUZUKI -->
+                        <div>
+                            <h4 class="font-black text-yellow-400 text-sm mb-2 uppercase tracking-wider">Suzuki</h4>
+                            <ul class="space-y-1.5">
+                                <li><a href="#vehiculo-suzuki-baleno" onclick="scrollToVehicle('vehiculo-suzuki-baleno');return false;"" class="text-gray-300 hover:text-yellow-500 text-sm transition flex items-center gap-2"><i class="fas fa-chevron-right text-[8px] text-yellow-600"></i>Baleno</a></li>
+                                <li><a href="#vehiculo-suzuki-celerio" onclick="scrollToVehicle('vehiculo-suzuki-celerio');return false;"" class="text-gray-300 hover:text-yellow-500 text-sm transition flex items-center gap-2"><i class="fas fa-chevron-right text-[8px] text-yellow-600"></i>Celerio</a></li>
+                                <li><a href="#vehiculo-suzuki-swift" onclick="scrollToVehicle('vehiculo-suzuki-swift');return false;"" class="text-gray-300 hover:text-yellow-500 text-sm transition flex items-center gap-2"><i class="fas fa-chevron-right text-[8px] text-yellow-600"></i>Swift</a></li>
+                            </ul>
+                        </div>
+                        <!-- TOYOTA -->
+                        <div>
+                            <h4 class="font-black text-yellow-400 text-sm mb-2 uppercase tracking-wider">Toyota</h4>
+                            <ul class="space-y-1.5">
+                                <li><a href="#vehiculo-toyota-corolla" onclick="scrollToVehicle('vehiculo-toyota-corolla');return false;"" class="text-gray-300 hover:text-yellow-500 text-sm transition flex items-center gap-2"><i class="fas fa-chevron-right text-[8px] text-yellow-600"></i>Corolla</a></li>
+                                <li><a href="#vehiculo-toyota-yaris" onclick="scrollToVehicle('vehiculo-toyota-yaris');return false;"" class="text-gray-300 hover:text-yellow-500 text-sm transition flex items-center gap-2"><i class="fas fa-chevron-right text-[8px] text-yellow-600"></i>Yaris</a></li>
+                            </ul>
+                        </div>
+                        <!-- VOLKSWAGEN -->
+                        <div>
+                            <h4 class="font-black text-yellow-400 text-sm mb-2 uppercase tracking-wider">Volkswagen</h4>
+                            <ul class="space-y-1.5">
+                                <li><a href="#vehiculo-volkswagen-gol" onclick="scrollToVehicle('vehiculo-volkswagen-gol');return false;"" class="text-gray-300 hover:text-yellow-500 text-sm transition flex items-center gap-2"><i class="fas fa-chevron-right text-[8px] text-yellow-600"></i>Gol</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-6 border-t border-gray-700 text-center">
+                        <p class="text-gray-400 text-sm mb-3">Tambien trabajamos con <strong class="text-yellow-400">BMW, Mercedes-Benz, Audi, Volvo, Jeep, Mitsubishi, Chery, Geely, BYD, JAC</strong> y muchas mas marcas.</p>
+                        <a href="https://wa.me/56992537569?text=Hola!%20Quiero%20cotizar%20un%20tapizado%20de%20volante%20para%20mi%20auto." class="inline-block bg-yellow-500 text-black px-6 py-2.5 rounded-full font-bold hover:bg-yellow-400 transition uppercase text-xs"><i class="fab fa-whatsapp mr-2"></i>Consulta tu Marca</a>
+                    </div>
+                </div>
+            </div>
+
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-6xl mx-auto" id="vehicleGrid">
                 <!-- VISIBLE: Primeras 12 tarjetas -->
-                <div class="vehicle-card-col">
+                <div class="vehicle-card-col" id="vehiculo-renault-logan">
                     <div class="vehicle-card bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 cursor-pointer" onclick="openVehicleModal('https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/Renault-logan.png','Renault Logan')">
                         <div class="bg-gray-700/50 p-3"><img src="https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/Renault-logan-300x225.png" alt="Renault Logan tapizado de volantes" class="w-full h-28 object-contain transition-transform duration-300 hover:scale-110" loading="lazy"></div>
                         <div class="p-3"><h3 class="font-black text-yellow-500 text-sm">Renault</h3><p class="text-gray-400 text-xs">Logan</p><div class="flex justify-between mt-2"><span class="text-[10px] text-gray-500 bg-gray-700 px-2 py-0.5 rounded-full">1.0L-1.6L</span><span class="text-[10px] text-gray-500 bg-gray-700 px-2 py-0.5 rounded-full">2005-2022</span></div></div>
                     </div>
                 </div>
-                <div class="vehicle-card-col">
+                <div class="vehicle-card-col" id="vehiculo-hyundai-grand-i10">
                     <div class="vehicle-card bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 cursor-pointer" onclick="openVehicleModal('https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/hyundai-grandi10.png','Hyundai Grand i10')">
                         <div class="bg-gray-700/50 p-3"><img src="https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/hyundai-grandi10-300x137.png" alt="Hyundai Grand i10 tapizado de volantes" class="w-full h-28 object-contain transition-transform duration-300 hover:scale-110" loading="lazy"></div>
                         <div class="p-3"><h3 class="font-black text-yellow-500 text-sm">Hyundai</h3><p class="text-gray-400 text-xs">Grand i10</p><div class="flex justify-between mt-2"><span class="text-[10px] text-gray-500 bg-gray-700 px-2 py-0.5 rounded-full">1.0L-1.2L</span><span class="text-[10px] text-gray-500 bg-gray-700 px-2 py-0.5 rounded-full">2013-2022</span></div></div>
                     </div>
                 </div>
-                <div class="vehicle-card-col">
+                <div class="vehicle-card-col" id="vehiculo-honda-city">
                     <div class="vehicle-card bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 cursor-pointer" onclick="openVehicleModal('https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/honda-city.png','Honda City')">
                         <div class="bg-gray-700/50 p-3"><img src="https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/honda-city-300x225.png" alt="Honda City tapizado de volantes" class="w-full h-28 object-contain transition-transform duration-300 hover:scale-110" loading="lazy"></div>
                         <div class="p-3"><h3 class="font-black text-yellow-500 text-sm">Honda</h3><p class="text-gray-400 text-xs">City</p><div class="flex justify-between mt-2"><span class="text-[10px] text-gray-500 bg-gray-700 px-2 py-0.5 rounded-full">1.5L</span><span class="text-[10px] text-gray-500 bg-gray-700 px-2 py-0.5 rounded-full">2009-2022</span></div></div>
                     </div>
                 </div>
-                <div class="vehicle-card-col">
+                <div class="vehicle-card-col" id="vehiculo-chevrolet-sonic">
                     <div class="vehicle-card bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 cursor-pointer" onclick="openVehicleModal('https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/chevrolet-sonic-1024x676.png','Chevrolet Sonic')">
                         <div class="bg-gray-700/50 p-3"><img src="https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/chevrolet-sonic-300x198.png" alt="Chevrolet Sonic tapizado de volantes" class="w-full h-28 object-contain transition-transform duration-300 hover:scale-110" loading="lazy"></div>
                         <div class="p-3"><h3 class="font-black text-yellow-500 text-sm">Chevrolet</h3><p class="text-gray-400 text-xs">Sonic</p><div class="flex justify-between mt-2"><span class="text-[10px] text-gray-500 bg-gray-700 px-2 py-0.5 rounded-full">1.4L-1.6L</span><span class="text-[10px] text-gray-500 bg-gray-700 px-2 py-0.5 rounded-full">2012-2020</span></div></div>
                     </div>
                 </div>
-                <div class="vehicle-card-col">
+                <div class="vehicle-card-col" id="vehiculo-ford-fiesta">
                     <div class="vehicle-card bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 cursor-pointer" onclick="openVehicleModal('https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/ford-fiesta-1024x680.png','Ford Fiesta')">
                         <div class="bg-gray-700/50 p-3"><img src="https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/ford-fiesta-300x199.png" alt="Ford Fiesta tapizado de volantes" class="w-full h-28 object-contain transition-transform duration-300 hover:scale-110" loading="lazy"></div>
                         <div class="p-3"><h3 class="font-black text-yellow-500 text-sm">Ford</h3><p class="text-gray-400 text-xs">Fiesta</p><div class="flex justify-between mt-2"><span class="text-[10px] text-gray-500 bg-gray-700 px-2 py-0.5 rounded-full">1.6L</span><span class="text-[10px] text-gray-500 bg-gray-700 px-2 py-0.5 rounded-full">2005-2019</span></div></div>
                     </div>
                 </div>
-                <div class="vehicle-card-col">
+                <div class="vehicle-card-col" id="vehiculo-suzuki-celerio">
                     <div class="vehicle-card bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 cursor-pointer" onclick="openVehicleModal('https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/suzuki-celerio.png','Suzuki Celerio')">
                         <div class="bg-gray-700/50 p-3"><img src="https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/suzuki-celerio-300x225.png" alt="Suzuki Celerio tapizado de volantes" class="w-full h-28 object-contain transition-transform duration-300 hover:scale-110" loading="lazy"></div>
                         <div class="p-3"><h3 class="font-black text-yellow-500 text-sm">Suzuki</h3><p class="text-gray-400 text-xs">Celerio</p><div class="flex justify-between mt-2"><span class="text-[10px] text-gray-500 bg-gray-700 px-2 py-0.5 rounded-full">1.0L-1.2L</span><span class="text-[10px] text-gray-500 bg-gray-700 px-2 py-0.5 rounded-full">2008-2022</span></div></div>
                     </div>
                 </div>
-                <div class="vehicle-card-col">
+                <div class="vehicle-card-col" id="vehiculo-subaru-xv">
                     <div class="vehicle-card bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 cursor-pointer" onclick="openVehicleModal('https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/subaru-xv.png','Subaru XV')">
                         <div class="bg-gray-700/50 p-3"><img src="https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/subaru-xv-300x225.png" alt="Subaru XV tapizado de volantes" class="w-full h-28 object-contain transition-transform duration-300 hover:scale-110" loading="lazy"></div>
                         <div class="p-3"><h3 class="font-black text-yellow-500 text-sm">Subaru</h3><p class="text-gray-400 text-xs">XV Crossover</p><div class="flex justify-between mt-2"><span class="text-[10px] text-gray-500 bg-gray-700 px-2 py-0.5 rounded-full">1.6L-2.0L</span><span class="text-[10px] text-gray-500 bg-gray-700 px-2 py-0.5 rounded-full">2012-2022</span></div></div>
                     </div>
                 </div>
-                <div class="vehicle-card-col">
+                <div class="vehicle-card-col" id="vehiculo-subaru-forester">
                     <div class="vehicle-card bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 cursor-pointer" onclick="openVehicleModal('https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/subaru-forester-1024x587.png','Subaru Forester')">
                         <div class="bg-gray-700/50 p-3"><img src="https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/subaru-forester-300x172.png" alt="Subaru Forester tapizado de volantes" class="w-full h-28 object-contain transition-transform duration-300 hover:scale-110" loading="lazy"></div>
                         <div class="p-3"><h3 class="font-black text-yellow-500 text-sm">Subaru</h3><p class="text-gray-400 text-xs">Forester SUV</p><div class="flex justify-between mt-2"><span class="text-[10px] text-gray-500 bg-gray-700 px-2 py-0.5 rounded-full">2.0L-2.5L</span><span class="text-[10px] text-gray-500 bg-gray-700 px-2 py-0.5 rounded-full">2005-2022</span></div></div>
                     </div>
                 </div>
-                <div class="vehicle-card-col">
+                <div class="vehicle-card-col" id="vehiculo-renault-duster">
                     <div class="vehicle-card bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 cursor-pointer" onclick="openVehicleModal('https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/renault-duster.png','Renault Duster')">
                         <div class="bg-gray-700/50 p-3"><img src="https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/renault-duster-300x158.png" alt="Renault Duster tapizado de volantes" class="w-full h-28 object-contain transition-transform duration-300 hover:scale-110" loading="lazy"></div>
                         <div class="p-3"><h3 class="font-black text-yellow-500 text-sm">Renault</h3><p class="text-gray-400 text-xs">Duster SUV</p><div class="flex justify-between mt-2"><span class="text-[10px] text-gray-500 bg-gray-700 px-2 py-0.5 rounded-full">1.6L-2.0L</span><span class="text-[10px] text-gray-500 bg-gray-700 px-2 py-0.5 rounded-full">2012-2022</span></div></div>
                     </div>
                 </div>
-                <div class="vehicle-card-col">
+                <div class="vehicle-card-col" id="vehiculo-toyota-corolla">
                     <div class="vehicle-card bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 cursor-pointer" onclick="openVehicleModal('https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/toyota-corolla.png','Toyota Corolla')">
                         <div class="bg-gray-700/50 p-3"><img src="https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/toyota-corolla-300x225.png" alt="Toyota Corolla tapizado de volantes" class="w-full h-28 object-contain transition-transform duration-300 hover:scale-110" loading="lazy"></div>
                         <div class="p-3"><h3 class="font-black text-yellow-500 text-sm">Toyota</h3><p class="text-gray-400 text-xs">Corolla</p><div class="flex justify-between mt-2"><span class="text-[10px] text-gray-500 bg-gray-700 px-2 py-0.5 rounded-full">1.6L-2.0L</span><span class="text-[10px] text-gray-500 bg-gray-700 px-2 py-0.5 rounded-full">2005-2022</span></div></div>
                     </div>
                 </div>
-                <div class="vehicle-card-col">
+                <div class="vehicle-card-col" id="vehiculo-mazda-cx-5">
                     <div class="vehicle-card bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 cursor-pointer" onclick="openVehicleModal('https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/mazda-cx-5-1024x680.png','Mazda CX-5')">
                         <div class="bg-gray-700/50 p-3"><img src="https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/mazda-cx-5-300x199.png" alt="Mazda CX-5 tapizado de volantes" class="w-full h-28 object-contain transition-transform duration-300 hover:scale-110" loading="lazy"></div>
                         <div class="p-3"><h3 class="font-black text-yellow-500 text-sm">Mazda</h3><p class="text-gray-400 text-xs">CX-5 SUV</p><div class="flex justify-between mt-2"><span class="text-[10px] text-gray-500 bg-gray-700 px-2 py-0.5 rounded-full">2.0L-2.5L</span><span class="text-[10px] text-gray-500 bg-gray-700 px-2 py-0.5 rounded-full">2012-2022</span></div></div>
                     </div>
                 </div>
-                <div class="vehicle-card-col">
+                <div class="vehicle-card-col" id="vehiculo-hyundai-tucson">
                     <div class="vehicle-card bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 cursor-pointer" onclick="openVehicleModal('https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/hyundai-tucson.png','Hyundai Tucson')">
                         <div class="bg-gray-700/50 p-3"><img src="https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/hyundai-tucson-300x184.png" alt="Hyundai Tucson tapizado de volantes" class="w-full h-28 object-contain transition-transform duration-300 hover:scale-110" loading="lazy"></div>
                         <div class="p-3"><h3 class="font-black text-yellow-500 text-sm">Hyundai</h3><p class="text-gray-400 text-xs">Tucson SUV</p><div class="flex justify-between mt-2"><span class="text-[10px] text-gray-500 bg-gray-700 px-2 py-0.5 rounded-full">1.6L-2.0L</span><span class="text-[10px] text-gray-500 bg-gray-700 px-2 py-0.5 rounded-full">2005-2022</span></div></div>
                     </div>
                 </div>
-                <!-- OCULTOS: Vehiculos adicionales -->
-                <div class="vehicle-card-col" style="display:none;">
-                    <div class="vehicle-card bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 cursor-pointer" onclick="openVehicleModal('https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/honda-crv.png','Honda CR-V')">
-                        <div class="bg-gray-700/50 p-3"><img src="https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/honda-crv-300x225.png" alt="Honda CR-V tapizado de volantes" class="w-full h-28 object-contain transition-transform duration-300 hover:scale-110" loading="lazy"></div>
+                                <!-- OCULTOS: Vehiculos adicionales -->
+                <div class="vehicle-card-col" id="vehiculo-honda-cr-v" style="display:none;">
+                    <div class="vehicle-card bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 cursor-pointer" onclick="openVehicleModal('https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/honda-crv.png','Honda CR-V SUV')">
+                        <div class="bg-gray-700/50 p-3"><img src="https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/honda-crv-300x225.png" alt="Honda CR-V SUV tapizado de volantes" class="w-full h-28 object-contain transition-transform duration-300 hover:scale-110" loading="lazy"></div>
                         <div class="p-3"><h3 class="font-black text-yellow-500 text-sm">Honda</h3><p class="text-gray-400 text-xs">CR-V SUV</p><div class="flex justify-between mt-2"><span class="text-[10px] text-gray-500 bg-gray-700 px-2 py-0.5 rounded-full">2.0L-2.4L</span><span class="text-[10px] text-gray-500 bg-gray-700 px-2 py-0.5 rounded-full">2005-2022</span></div></div>
                     </div>
                 </div>
-                <div class="vehicle-card-col" style="display:none;">
+                <div class="vehicle-card-col" id="vehiculo-honda-civic" style="display:none;">
                     <div class="vehicle-card bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 cursor-pointer" onclick="openVehicleModal('https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/honda-civic.png','Honda Civic')">
                         <div class="bg-gray-700/50 p-3"><img src="https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/honda-civic-300x300.png" alt="Honda Civic tapizado de volantes" class="w-full h-28 object-contain transition-transform duration-300 hover:scale-110" loading="lazy"></div>
                         <div class="p-3"><h3 class="font-black text-yellow-500 text-sm">Honda</h3><p class="text-gray-400 text-xs">Civic</p><div class="flex justify-between mt-2"><span class="text-[10px] text-gray-500 bg-gray-700 px-2 py-0.5 rounded-full">1.6L-2.0L</span><span class="text-[10px] text-gray-500 bg-gray-700 px-2 py-0.5 rounded-full">2005-2022</span></div></div>
                     </div>
                 </div>
-                <div class="vehicle-card-col" style="display:none;">
+                <div class="vehicle-card-col" id="vehiculo-mazda-3" style="display:none;">
                     <div class="vehicle-card bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 cursor-pointer" onclick="openVehicleModal('https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/mazda-3.png','Mazda 3')">
                         <div class="bg-gray-700/50 p-3"><img src="https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/mazda-3-300x158.png" alt="Mazda 3 tapizado de volantes" class="w-full h-28 object-contain transition-transform duration-300 hover:scale-110" loading="lazy"></div>
                         <div class="p-3"><h3 class="font-black text-yellow-500 text-sm">Mazda</h3><p class="text-gray-400 text-xs">3</p><div class="flex justify-between mt-2"><span class="text-[10px] text-gray-500 bg-gray-700 px-2 py-0.5 rounded-full">1.6L-2.5L</span><span class="text-[10px] text-gray-500 bg-gray-700 px-2 py-0.5 rounded-full">2005-2022</span></div></div>
                     </div>
                 </div>
-                <div class="vehicle-card-col" style="display:none;">
+                <div class="vehicle-card-col" id="vehiculo-volkswagen-gol" style="display:none;">
                     <div class="vehicle-card bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 cursor-pointer" onclick="openVehicleModal('https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/volkswagen-gol.png','Volkswagen Gol')">
                         <div class="bg-gray-700/50 p-3"><img src="https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/volkswagen-gol-300x177.png" alt="Volkswagen Gol tapizado de volantes" class="w-full h-28 object-contain transition-transform duration-300 hover:scale-110" loading="lazy"></div>
                         <div class="p-3"><h3 class="font-black text-yellow-500 text-sm">Volkswagen</h3><p class="text-gray-400 text-xs">Gol</p><div class="flex justify-between mt-2"><span class="text-[10px] text-gray-500 bg-gray-700 px-2 py-0.5 rounded-full">1.6L</span><span class="text-[10px] text-gray-500 bg-gray-700 px-2 py-0.5 rounded-full">2005-2022</span></div></div>
                     </div>
                 </div>
-                <div class="vehicle-card-col" style="display:none;">
-                    <div class="vehicle-card bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 cursor-pointer" onclick="openVehicleModal('https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/ford-ecosport.png','Ford EcoSport')">
-                        <div class="bg-gray-700/50 p-3"><img src="https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/ford-ecosport-300x184.png" alt="Ford EcoSport tapizado de volantes" class="w-full h-28 object-contain transition-transform duration-300 hover:scale-110" loading="lazy"></div>
+                <div class="vehicle-card-col" id="vehiculo-ford-ecosport" style="display:none;">
+                    <div class="vehicle-card bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 cursor-pointer" onclick="openVehicleModal('https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/ford-ecosport.png','Ford EcoSport SUV')">
+                        <div class="bg-gray-700/50 p-3"><img src="https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/ford-ecosport-300x184.png" alt="Ford EcoSport SUV tapizado de volantes" class="w-full h-28 object-contain transition-transform duration-300 hover:scale-110" loading="lazy"></div>
                         <div class="p-3"><h3 class="font-black text-yellow-500 text-sm">Ford</h3><p class="text-gray-400 text-xs">EcoSport SUV</p><div class="flex justify-between mt-2"><span class="text-[10px] text-gray-500 bg-gray-700 px-2 py-0.5 rounded-full">1.4L-2.0L</span><span class="text-[10px] text-gray-500 bg-gray-700 px-2 py-0.5 rounded-full">2005-2022</span></div></div>
                     </div>
                 </div>
-                <div class="vehicle-card-col" style="display:none;">
-                    <div class="vehicle-card bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 cursor-pointer" onclick="openVehicleModal('https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/mg-3.png','MG 3')">
-                        <div class="bg-gray-700/50 p-3"><img src="https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/mg-3-300x216.png" alt="MG 3 tapizado de volantes" class="w-full h-28 object-contain transition-transform duration-300 hover:scale-110" loading="lazy"></div>
+                <div class="vehicle-card-col" id="vehiculo-mg-3" style="display:none;">
+                    <div class="vehicle-card bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 cursor-pointer" onclick="openVehicleModal('https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/mg-3.png','MG MG 3')">
+                        <div class="bg-gray-700/50 p-3"><img src="https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/mg-3-300x216.png" alt="MG MG 3 tapizado de volantes" class="w-full h-28 object-contain transition-transform duration-300 hover:scale-110" loading="lazy"></div>
                         <div class="p-3"><h3 class="font-black text-yellow-500 text-sm">MG</h3><p class="text-gray-400 text-xs">MG 3</p><div class="flex justify-between mt-2"><span class="text-[10px] text-gray-500 bg-gray-700 px-2 py-0.5 rounded-full">1.5L</span><span class="text-[10px] text-gray-500 bg-gray-700 px-2 py-0.5 rounded-full">2014-2022</span></div></div>
                     </div>
                 </div>
-                <div class="vehicle-card-col" style="display:none;">
-                    <div class="vehicle-card bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 cursor-pointer" onclick="openVehicleModal('https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/mg-zs-1024x363.png','MG ZS')">
-                        <div class="bg-gray-700/50 p-3"><img src="https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/mg-zs-300x106.png" alt="MG ZS tapizado de volantes" class="w-full h-28 object-contain transition-transform duration-300 hover:scale-110" loading="lazy"></div>
+                <div class="vehicle-card-col" id="vehiculo-mg-zs" style="display:none;">
+                    <div class="vehicle-card bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 cursor-pointer" onclick="openVehicleModal('https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/mg-zs-1024x363.png','MG ZS SUV')">
+                        <div class="bg-gray-700/50 p-3"><img src="https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/mg-zs-300x106.png" alt="MG ZS SUV tapizado de volantes" class="w-full h-28 object-contain transition-transform duration-300 hover:scale-110" loading="lazy"></div>
                         <div class="p-3"><h3 class="font-black text-yellow-500 text-sm">MG</h3><p class="text-gray-400 text-xs">ZS SUV</p><div class="flex justify-between mt-2"><span class="text-[10px] text-gray-500 bg-gray-700 px-2 py-0.5 rounded-full">1.5L</span><span class="text-[10px] text-gray-500 bg-gray-700 px-2 py-0.5 rounded-full">2017-2022</span></div></div>
                     </div>
                 </div>
-                <div class="vehicle-card-col" style="display:none;">
+                <div class="vehicle-card-col" id="vehiculo-suzuki-baleno" style="display:none;">
                     <div class="vehicle-card bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 cursor-pointer" onclick="openVehicleModal('https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/suzuki-baleno.png','Suzuki Baleno')">
                         <div class="bg-gray-700/50 p-3"><img src="https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/suzuki-baleno-300x196.png" alt="Suzuki Baleno tapizado de volantes" class="w-full h-28 object-contain transition-transform duration-300 hover:scale-110" loading="lazy"></div>
                         <div class="p-3"><h3 class="font-black text-yellow-500 text-sm">Suzuki</h3><p class="text-gray-400 text-xs">Baleno</p><div class="flex justify-between mt-2"><span class="text-[10px] text-gray-500 bg-gray-700 px-2 py-0.5 rounded-full">1.4L</span><span class="text-[10px] text-gray-500 bg-gray-700 px-2 py-0.5 rounded-full">2016-2022</span></div></div>
                     </div>
                 </div>
-                <div class="vehicle-card-col" style="display:none;">
+                <div class="vehicle-card-col" id="vehiculo-hyundai-accent" style="display:none;">
                     <div class="vehicle-card bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 cursor-pointer" onclick="openVehicleModal('https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/hyundai-accent-1024x680.png','Hyundai Accent')">
                         <div class="bg-gray-700/50 p-3"><img src="https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/hyundai-accent-300x199.png" alt="Hyundai Accent tapizado de volantes" class="w-full h-28 object-contain transition-transform duration-300 hover:scale-110" loading="lazy"></div>
                         <div class="p-3"><h3 class="font-black text-yellow-500 text-sm">Hyundai</h3><p class="text-gray-400 text-xs">Accent</p><div class="flex justify-between mt-2"><span class="text-[10px] text-gray-500 bg-gray-700 px-2 py-0.5 rounded-full">1.4L-1.6L</span><span class="text-[10px] text-gray-500 bg-gray-700 px-2 py-0.5 rounded-full">2005-2022</span></div></div>
                     </div>
                 </div>
-                <div class="vehicle-card-col" style="display:none;">
-                    <div class="vehicle-card bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 cursor-pointer" onclick="openVehicleModal('https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/peugeot-3008.png','Peugeot 3008')">
-                        <div class="bg-gray-700/50 p-3"><img src="https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/peugeot-3008-300x199.png" alt="Peugeot 3008 tapizado de volantes" class="w-full h-28 object-contain transition-transform duration-300 hover:scale-110" loading="lazy"></div>
+                <div class="vehicle-card-col" id="vehiculo-peugeot-3008" style="display:none;">
+                    <div class="vehicle-card bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 cursor-pointer" onclick="openVehicleModal('https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/peugeot-3008.png','Peugeot 3008 SUV')">
+                        <div class="bg-gray-700/50 p-3"><img src="https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/peugeot-3008-300x199.png" alt="Peugeot 3008 SUV tapizado de volantes" class="w-full h-28 object-contain transition-transform duration-300 hover:scale-110" loading="lazy"></div>
                         <div class="p-3"><h3 class="font-black text-yellow-500 text-sm">Peugeot</h3><p class="text-gray-400 text-xs">3008 SUV</p><div class="flex justify-between mt-2"><span class="text-[10px] text-gray-500 bg-gray-700 px-2 py-0.5 rounded-full">1.5L-2.0L</span><span class="text-[10px] text-gray-500 bg-gray-700 px-2 py-0.5 rounded-full">2009-2022</span></div></div>
                     </div>
                 </div>
-                <div class="vehicle-card-col" style="display:none;">
+                <div class="vehicle-card-col" id="vehiculo-peugeot-208" style="display:none;">
                     <div class="vehicle-card bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 cursor-pointer" onclick="openVehicleModal('https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/peugeot-208.png','Peugeot 208')">
                         <div class="bg-gray-700/50 p-3"><img src="https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/peugeot-208-300x197.png" alt="Peugeot 208 tapizado de volantes" class="w-full h-28 object-contain transition-transform duration-300 hover:scale-110" loading="lazy"></div>
                         <div class="p-3"><h3 class="font-black text-yellow-500 text-sm">Peugeot</h3><p class="text-gray-400 text-xs">208</p><div class="flex justify-between mt-2"><span class="text-[10px] text-gray-500 bg-gray-700 px-2 py-0.5 rounded-full">1.2L-1.6L</span><span class="text-[10px] text-gray-500 bg-gray-700 px-2 py-0.5 rounded-full">2013-2022</span></div></div>
                     </div>
                 </div>
-                <div class="vehicle-card-col" style="display:none;">
-                    <div class="vehicle-card bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 cursor-pointer" onclick="openVehicleModal('https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/nissan-kicks-1024x502.png','Nissan Kicks')">
-                        <div class="bg-gray-700/50 p-3"><img src="https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/nissan-kicks-300x147.png" alt="Nissan Kicks tapizado de volantes" class="w-full h-28 object-contain transition-transform duration-300 hover:scale-110" loading="lazy"></div>
+                <div class="vehicle-card-col" id="vehiculo-nissan-kicks" style="display:none;">
+                    <div class="vehicle-card bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 cursor-pointer" onclick="openVehicleModal('https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/nissan-kicks-1024x502.png','Nissan Kicks SUV')">
+                        <div class="bg-gray-700/50 p-3"><img src="https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/nissan-kicks-300x147.png" alt="Nissan Kicks SUV tapizado de volantes" class="w-full h-28 object-contain transition-transform duration-300 hover:scale-110" loading="lazy"></div>
                         <div class="p-3"><h3 class="font-black text-yellow-500 text-sm">Nissan</h3><p class="text-gray-400 text-xs">Kicks SUV</p><div class="flex justify-between mt-2"><span class="text-[10px] text-gray-500 bg-gray-700 px-2 py-0.5 rounded-full">1.5L-1.6L</span><span class="text-[10px] text-gray-500 bg-gray-700 px-2 py-0.5 rounded-full">2016-2022</span></div></div>
                     </div>
                 </div>
-                <div class="vehicle-card-col" style="display:none;">
+                <div class="vehicle-card-col" id="vehiculo-nissan-versa" style="display:none;">
                     <div class="vehicle-card bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 cursor-pointer" onclick="openVehicleModal('https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/nissan-versa.png','Nissan Versa')">
                         <div class="bg-gray-700/50 p-3"><img src="https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/nissan-versa-300x200.png" alt="Nissan Versa tapizado de volantes" class="w-full h-28 object-contain transition-transform duration-300 hover:scale-110" loading="lazy"></div>
                         <div class="p-3"><h3 class="font-black text-yellow-500 text-sm">Nissan</h3><p class="text-gray-400 text-xs">Versa</p><div class="flex justify-between mt-2"><span class="text-[10px] text-gray-500 bg-gray-700 px-2 py-0.5 rounded-full">1.6L-1.8L</span><span class="text-[10px] text-gray-500 bg-gray-700 px-2 py-0.5 rounded-full">2012-2022</span></div></div>
                     </div>
                 </div>
-                <div class="vehicle-card-col" style="display:none;">
+                <div class="vehicle-card-col" id="vehiculo-kia-rio" style="display:none;">
                     <div class="vehicle-card bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 cursor-pointer" onclick="openVehicleModal('https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/kia-rio.png','Kia Rio')">
                         <div class="bg-gray-700/50 p-3"><img src="https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/kia-rio-300x180.png" alt="Kia Rio tapizado de volantes" class="w-full h-28 object-contain transition-transform duration-300 hover:scale-110" loading="lazy"></div>
                         <div class="p-3"><h3 class="font-black text-yellow-500 text-sm">Kia</h3><p class="text-gray-400 text-xs">Rio</p><div class="flex justify-between mt-2"><span class="text-[10px] text-gray-500 bg-gray-700 px-2 py-0.5 rounded-full">1.2L-1.4L</span><span class="text-[10px] text-gray-500 bg-gray-700 px-2 py-0.5 rounded-full">2005-2022</span></div></div>
                     </div>
                 </div>
-                <div class="vehicle-card-col" style="display:none;">
+                <div class="vehicle-card-col" id="vehiculo-toyota-yaris" style="display:none;">
                     <div class="vehicle-card bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 cursor-pointer" onclick="openVehicleModal('https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/toyota-yaris-1024x683.png','Toyota Yaris')">
                         <div class="bg-gray-700/50 p-3"><img src="https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/toyota-yaris-300x200.png" alt="Toyota Yaris tapizado de volantes" class="w-full h-28 object-contain transition-transform duration-300 hover:scale-110" loading="lazy"></div>
                         <div class="p-3"><h3 class="font-black text-yellow-500 text-sm">Toyota</h3><p class="text-gray-400 text-xs">Yaris</p><div class="flex justify-between mt-2"><span class="text-[10px] text-gray-500 bg-gray-700 px-2 py-0.5 rounded-full">1.3L-1.5L</span><span class="text-[10px] text-gray-500 bg-gray-700 px-2 py-0.5 rounded-full">2005-2022</span></div></div>
                     </div>
                 </div>
-                <div class="vehicle-card-col" style="display:none;">
+                <div class="vehicle-card-col" id="vehiculo-chevrolet-spark" style="display:none;">
                     <div class="vehicle-card bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 cursor-pointer" onclick="openVehicleModal('https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/chevrolet-spark-1024x768.png','Chevrolet Spark')">
                         <div class="bg-gray-700/50 p-3"><img src="https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/chevrolet-spark-300x225.png" alt="Chevrolet Spark tapizado de volantes" class="w-full h-28 object-contain transition-transform duration-300 hover:scale-110" loading="lazy"></div>
                         <div class="p-3"><h3 class="font-black text-yellow-500 text-sm">Chevrolet</h3><p class="text-gray-400 text-xs">Spark</p><div class="flex justify-between mt-2"><span class="text-[10px] text-gray-500 bg-gray-700 px-2 py-0.5 rounded-full">1.0L-1.2L</span><span class="text-[10px] text-gray-500 bg-gray-700 px-2 py-0.5 rounded-full">2010-2022</span></div></div>
                     </div>
                 </div>
-                <div class="vehicle-card-col" style="display:none;">
+                <div class="vehicle-card-col" id="vehiculo-chevrolet-sail" style="display:none;">
                     <div class="vehicle-card bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 cursor-pointer" onclick="openVehicleModal('https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/chevrolet-sail.png','Chevrolet Sail')">
                         <div class="bg-gray-700/50 p-3"><img src="https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/chevrolet-sail.png" alt="Chevrolet Sail tapizado de volantes" class="w-full h-28 object-contain transition-transform duration-300 hover:scale-110" loading="lazy"></div>
                         <div class="p-3"><h3 class="font-black text-yellow-500 text-sm">Chevrolet</h3><p class="text-gray-400 text-xs">Sail</p><div class="flex justify-between mt-2"><span class="text-[10px] text-gray-500 bg-gray-700 px-2 py-0.5 rounded-full">1.3L-1.5L</span><span class="text-[10px] text-gray-500 bg-gray-700 px-2 py-0.5 rounded-full">2011-2022</span></div></div>
                     </div>
                 </div>
-                <div class="vehicle-card-col" style="display:none;">
+                <div class="vehicle-card-col" id="vehiculo-kia-morning" style="display:none;">
                     <div class="vehicle-card bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 cursor-pointer" onclick="openVehicleModal('https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/33678-MORNING-1024x768.jpg','Kia Morning')">
                         <div class="bg-gray-700/50 p-3"><img src="https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/10/33678-MORNING-300x225.jpg" alt="Kia Morning tapizado de volantes" class="w-full h-28 object-contain transition-transform duration-300 hover:scale-110" loading="lazy"></div>
                         <div class="p-3"><h3 class="font-black text-yellow-500 text-sm">Kia</h3><p class="text-gray-400 text-xs">Morning</p><div class="flex justify-between mt-2"><span class="text-[10px] text-gray-500 bg-gray-700 px-2 py-0.5 rounded-full">1.0L-1.2L</span><span class="text-[10px] text-gray-500 bg-gray-700 px-2 py-0.5 rounded-full">2008-2022</span></div></div>
                     </div>
                 </div>
-                <div class="vehicle-card-col" style="display:none;">
+                <div class="vehicle-card-col" id="vehiculo-fiat-bravo" style="display:none;">
                     <div class="vehicle-card bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 cursor-pointer" onclick="openVehicleModal('https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/08/Fiat-Bravo-2016-1024x591.jpg','Fiat Bravo Tjet')">
-                        <div class="bg-gray-700/50 p-3"><img src="https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/08/Fiat-Bravo-2016-300x173.jpg" alt="Fiat Bravo tapizado de volantes" class="w-full h-28 object-contain transition-transform duration-300 hover:scale-110" loading="lazy"></div>
+                        <div class="bg-gray-700/50 p-3"><img src="https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/08/Fiat-Bravo-2016-300x173.jpg" alt="Fiat Bravo Tjet tapizado de volantes" class="w-full h-28 object-contain transition-transform duration-300 hover:scale-110" loading="lazy"></div>
                         <div class="p-3"><h3 class="font-black text-yellow-500 text-sm">Fiat</h3><p class="text-gray-400 text-xs">Bravo Tjet</p><div class="flex justify-between mt-2"><span class="text-[10px] text-gray-500 bg-gray-700 px-2 py-0.5 rounded-full">1.4L</span><span class="text-[10px] text-gray-500 bg-gray-700 px-2 py-0.5 rounded-full">2010</span></div></div>
                     </div>
                 </div>
-                <div class="vehicle-card-col" style="display:none;">
+                <div class="vehicle-card-col" id="vehiculo-suzuki-swift" style="display:none;">
                     <div class="vehicle-card bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 cursor-pointer" onclick="openVehicleModal('https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/08/pngegg-1-1024x683.png','Suzuki Swift')">
                         <div class="bg-gray-700/50 p-3"><img src="https://raw.githubusercontent.com/bboymak3/globalpro/main/images/wp-content/uploads/2024/08/pngegg-1-300x200.png" alt="Suzuki Swift tapizado de volantes" class="w-full h-28 object-contain transition-transform duration-300 hover:scale-110" loading="lazy"></div>
                         <div class="p-3"><h3 class="font-black text-yellow-500 text-sm">Suzuki</h3><p class="text-gray-400 text-xs">Swift</p><div class="flex justify-between mt-2"><span class="text-[10px] text-gray-500 bg-gray-700 px-2 py-0.5 rounded-full">1.2L-1.4L</span><span class="text-[10px] text-gray-500 bg-gray-700 px-2 py-0.5 rounded-full">2005-2022</span></div></div>
                     </div>
                 </div>
+
                 <!-- Tarjeta Premium -->
                 <div class="vehicle-card-col col-span-2 md:col-span-3 lg:col-span-4">
                     <div class="bg-gradient-to-r from-yellow-500/20 to-gray-800 rounded-2xl p-6 border border-yellow-500/50 text-center">
@@ -1123,6 +1263,34 @@
             document.getElementById('loadMoreVehicles').disabled = true;
             document.getElementById('loadMoreVehicles').classList.add('opacity-50', 'cursor-not-allowed');
             document.getElementById('vehicleCount').textContent = 'Mostrando 32 de 32 vehiculos';
+        }
+
+        // Handle vehicle list links - show hidden cards then scroll
+        function scrollToVehicle(hash) {
+            if (!hash) return;
+            const target = document.getElementById(hash);
+            if (!target) return;
+            // If hidden, reveal it and all hidden cards
+            if (target.style.display === 'none') {
+                loadMoreVehicles();
+            }
+            // Wait for reveal animation then scroll
+            setTimeout(() => {
+                target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                // Highlight effect
+                target.classList.add('highlight-target');
+                setTimeout(() => target.classList.remove('highlight-target'), 2000);
+            }, vehiclesLoaded ? 100 : 800);
+        }
+        // Listen for hash changes
+        window.addEventListener('hashchange', function() {
+            if (location.hash.startsWith('#vehiculo-')) {
+                scrollToVehicle(location.hash.substring(1));
+            }
+        });
+        // Handle initial hash on load
+        if (location.hash.startsWith('#vehiculo-')) {
+            setTimeout(() => scrollToVehicle(location.hash.substring(1)), 500);
         }
 
         // Gallery Filter
