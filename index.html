@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Tapizado de Volantes en Santiago | Tu Estilo, Tu Huella - Polerones Personalizados</title>
+    <title>Mono Cromático | Tapizado de Volantes en Santiago | Tu Estilo, Tu Huella</title>
     <meta name="description" content="Especialistas en tapizado de volantes personalizados en Santiago. Servicio a domicilio en toda la RM. Cuero, alcantara, reparación de volantes y polerones personalizados. Tu Estilo, Tu Huella.">
     <meta name="keywords" content="tapizado de volantes, tapizar volante precio, tapizar volante, tapizar volante coche, cuero para tapizar volante, forrar un volante con cuero, forrar volante alcantara, forrar volante coche, forrar volante de coche, forrar volante de cuero, forrar volante en cuero, forrar volante en piel, forrar volantes de piel, kit tapizado volante, piel para tapizar volante, precio tapizado volante coche, precio tapizado volante cuero, precio tapizado volante de coche, restauracion volantes, tapiceria de volantes, tapiceria de volantes de autos, tapiceria para volantes de autos, tapiceria volante, tapiceria volante de auto, tapiceria volantes, tapicero de volantes de autos, tapiceros de volantes de coche, tapizado cuero volante, tapizado de cuero para volantes, tapizado de volante de auto, tapizado de volante de coche, tapizado de volante de cuero, tapizado de volante en piel, tapizado de volantes para autos, tapizado de volantes precio, tapizado de volantes zona norte, tapizado de volantes zona oeste, tapizado de volantes zona sur, tapizado para volante, tapizado timon de auto, tapizado volante alcantara, tapizado volante bmw, tapizado volante bmw e46, tapizado volante bmw e90, tapizado volante cuero, tapizar timon cuero, tapizar un volante de coche, tapizar volante alcantara precio, tapizar volante citroen c4, tapizar volante coche precio, tapizar volante e46, tapizar volante en alcantara, tapizar volante en piel, tapizar volante mercedes, tapizar volante mercedes w211, tapizar volante peugeot 206, tapizar volante peugeot 308, tapizar volante piel vuelta, tapizar volante seat leon 2, tapizar volante sin desmontar, volante bmw tapizado, volante tapizado bmw e46, volante tapizado piel, volantes personalizados, polerones personalizados, diseño juvenil, tu estilo tu huella, tapizado de autos a domicilio, tapiceria de autos en santiago, tapizado de volante en cuero, tapizado volante alcantara, reparacion de volantes de autos, retapizado de volante, forrar volante de coche, tapizado de volantes de cuero, cubre volante de cuero, interiores de autos personalizados, volantes custom">
     
@@ -15,7 +15,7 @@
     <link rel="shortcut icon" href="images/tapizado-de-volantes-santiago-chile-serca-de-mi.png" type="image/png">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Tapizado de Volantes en Santiago | Tu Estilo, Tu Huella">
+    <meta property="og:title" content="Mono Cromático | Tapizado de Volantes en Santiago | Tu Estilo, Tu Huella">
     <meta property="og:description" content="Especialistas en tapizado de volantes personalizados en Santiago. Servicio a domicilio en toda la RM. Cuero, alcantara, reparación de volantes y polerones personalizados.">
     <meta property="og:image" content="https://tapizadodevolante.com/images/tapizado-de-volantes-santiago-chile-serca-de-mi.png">
     <meta property="og:url" content="https://tapizadodevolante.com/">
@@ -44,8 +44,8 @@
     {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
-      "name": "TAPIZADO DE VOLANTES En Santiago - Tu Estilo, Tu Huella",
-      "description": "Especialistas en tapizado de volantes personalizados en Santiago. Servicio a domicilio en toda la RM. Cuero, alcantara, reparación de volantes y polerones personalizados.",
+      "name": "Mono Cromático — Tapizado de Volantes en Santiago",
+      "description": "Mono Cromático: Especialistas en tapizado de volantes personalizados en Santiago. Servicio a domicilio en toda la RM. Cuero, alcantara, reparación de volantes y polerones personalizados. Tu Estilo, Tu Huella.",
       "url": "https://tapizadodevolante.com/",
       "telephone": "+56992537569",
       "address": {
@@ -113,25 +113,56 @@
         .filter-btn.active { background-color: #EAB308; color: #000; }
         /* Hidden class for gallery filter */
         .gallery-hidden { display: none !important; }
+        /* Mobile menu */
+        .mobile-menu { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
+        .mobile-menu.open { max-height: 600px; }
+        /* Comuna badge */
+        .comuna-badge { transition: all 0.2s; cursor: pointer; }
+        .comuna-badge:hover, .comuna-badge.highlight { background-color: #EAB308; color: #000; transform: scale(1.05); }
+        /* Vehicle card */
+        .vehicle-card { transition: all 0.3s; }
+        .vehicle-card:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(0,0,0,0.15); }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-900 font-poppins flex flex-col min-h-screen pb-20">
 
     <!-- NAV -->
-    <nav class="fixed w-full z-50 bg-black text-white p-4 shadow-xl border-b border-yellow-500/30">
-        <div class="container mx-auto flex justify-between items-center">
-            <div class="flex items-center space-x-3">
-                <img src="images/tapizado-de-volantes-santiago-chile-serca-de-mi.png" alt="Logo Tapizado de Volantes Santiago Chile" class="h-10 md:h-12">
+    <nav class="fixed w-full z-50 bg-black text-white shadow-xl border-b border-yellow-500/30">
+        <div class="container mx-auto flex justify-between items-center px-4 py-3">
+            <a href="#" class="flex items-center space-x-3">
+                <img src="images/tapizado-de-volantes-santiago-chile-serca-de-mi.png" alt="Mono Cromático Tapizado de Volantes" class="h-10 md:h-12">
                 <div>
-                    <span class="font-black text-yellow-500 italic uppercase tracking-tighter text-lg md:text-xl block leading-tight">TAPIZADO DE VOLANTES</span>
+                    <span class="font-black text-yellow-500 italic uppercase tracking-tighter text-lg md:text-xl block leading-tight">MONO CROMÁTICO</span>
                     <span class="text-[10px] text-gray-400 uppercase tracking-widest">Tu Estilo, Tu Huella</span>
                 </div>
+            </a>
+            <!-- Desktop Nav -->
+            <div class="hidden lg:flex items-center gap-6">
+                <a href="#quienes-somos" class="text-sm font-bold text-gray-300 hover:text-yellow-500 transition uppercase">Quiénes Somos</a>
+                <a href="#vehiculos" class="text-sm font-bold text-gray-300 hover:text-yellow-500 transition uppercase">Vehículos</a>
+                <a href="#comunas" class="text-sm font-bold text-gray-300 hover:text-yellow-500 transition uppercase">Comunas</a>
+                <a href="#galeria" class="text-sm font-bold text-gray-300 hover:text-yellow-500 transition uppercase">Galería</a>
+                <a href="#faq" class="text-sm font-bold text-gray-300 hover:text-yellow-500 transition uppercase">FAQ</a>
+                <a href="#contacto" class="text-sm font-bold text-gray-300 hover:text-yellow-500 transition uppercase">Contacto</a>
+                <a href="tel:+56992537569" class="bg-gray-800 text-white px-4 py-2 rounded-full font-bold text-xs hover:bg-yellow-500 hover:text-black transition uppercase"><i class="fas fa-phone mr-1"></i> Llamar</a>
+                <a href="https://wa.me/56992537569" class="bg-yellow-500 text-black px-5 py-2 rounded-full font-bold text-xs hover:bg-white transition uppercase shadow-lg">WhatsApp</a>
             </div>
-            <div class="flex items-center gap-3">
-                <a href="tel:+56992537569" class="hidden md:inline-flex bg-gray-800 text-white px-4 py-2 rounded-full font-bold text-xs hover:bg-yellow-500 hover:text-black transition uppercase">
-                    <i class="fas fa-phone mr-1"></i> Llamar
-                </a>
-                <a href="https://wa.me/56992537569" class="bg-yellow-500 text-black px-6 py-2 rounded-full font-bold text-sm hover:bg-white transition uppercase shadow-lg">WhatsApp</a>
+            <!-- Hamburger -->
+            <button onclick="document.getElementById('mobileMenu').classList.toggle('open')" class="lg:hidden text-yellow-500 text-2xl"><i class="fas fa-bars"></i></button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="mobile-menu lg:hidden bg-black/95 border-t border-yellow-500/20">
+            <div class="container mx-auto px-4 py-4 flex flex-col gap-3">
+                <a href="#quienes-somos" onclick="document.getElementById('mobileMenu').classList.remove('open')" class="text-sm font-bold text-gray-300 hover:text-yellow-500 py-2 border-b border-gray-800">Quiénes Somos</a>
+                <a href="#vehiculos" onclick="document.getElementById('mobileMenu').classList.remove('open')" class="text-sm font-bold text-gray-300 hover:text-yellow-500 py-2 border-b border-gray-800">Vehículos</a>
+                <a href="#comunas" onclick="document.getElementById('mobileMenu').classList.remove('open')" class="text-sm font-bold text-gray-300 hover:text-yellow-500 py-2 border-b border-gray-800">Comunas</a>
+                <a href="#galeria" onclick="document.getElementById('mobileMenu').classList.remove('open')" class="text-sm font-bold text-gray-300 hover:text-yellow-500 py-2 border-b border-gray-800">Galería</a>
+                <a href="#faq" onclick="document.getElementById('mobileMenu').classList.remove('open')" class="text-sm font-bold text-gray-300 hover:text-yellow-500 py-2 border-b border-gray-800">FAQ</a>
+                <a href="#contacto" onclick="document.getElementById('mobileMenu').classList.remove('open')" class="text-sm font-bold text-gray-300 hover:text-yellow-500 py-2 border-b border-gray-800">Contacto</a>
+                <div class="flex gap-2 pt-2">
+                    <a href="tel:+56992537569" class="flex-1 bg-gray-800 text-white px-4 py-3 rounded font-bold text-sm text-center"><i class="fas fa-phone mr-1"></i> Llamar</a>
+                    <a href="https://wa.me/56992537569" class="flex-1 bg-yellow-500 text-black px-4 py-3 rounded font-bold text-sm text-center"><i class="fab fa-whatsapp mr-1"></i> WhatsApp</a>
+                </div>
             </div>
         </div>
     </nav>
@@ -166,7 +197,7 @@
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-black mb-6 uppercase italic">Volante pelado? Lo arreglamos sin salir de casa</h2>
             <p class="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
-                En <strong class="inline-block text-lg md:text-xl font-black text-yellow-500 uppercase">Tapizado de Volantes en Santiago</strong> nos especializamos en la comodidad del cliente. Nuestro servicio de <strong>tapicero de volantes de autos</strong> se traslada a tu hogar u oficina en Santiago para realizar una <strong>restauracion de volantes</strong> con acabados de fabrica. Ademas ofrecemos <strong>polerones personalizados</strong> con diseños unicos. <strong>Tu Estilo, Tu Huella</strong> es nuestra filosofia.
+                En <strong class="inline-block text-lg md:text-xl font-black text-yellow-500 uppercase">Mono Cromático</strong> nos especializamos en la comodidad del cliente. Nuestro servicio de <strong>tapicero de volantes de autos</strong> se traslada a tu hogar u oficina en Santiago para realizar una <strong>restauracion de volantes</strong> con acabados de fabrica. Ademas ofrecemos <strong>polerones personalizados</strong> con diseños unicos. <strong>Tu Estilo, Tu Huella</strong> es nuestra filosofia.
             </p>
         </div>
     </section>
@@ -179,9 +210,9 @@
                     <img src="images/monocromatico-tapizeria-serca-de-santiago-volantes-polerones-personalizados.png" loading="lazy" class="rounded-xl shadow-xl hover:scale-105 transition duration-300 w-full h-full object-cover gallery-zoom" alt="Tapizado de volantes en Santiago Chile polerones personalizados" onclick="openModal(this.src)">
                 </div>
                 <div class="w-full md:w-1/2 flex flex-col justify-center">
-                    <h2 class="text-3xl md:text-4xl font-black mb-6 uppercase italic text-gray-900">Quienes Somos: Tu Estilo, Tu Huella en Santiago</h2>
+                    <h2 id="quienes-somos" class="text-3xl md:text-4xl font-black mb-6 uppercase italic text-gray-900">Quiénes Somos: Mono Cromático — Tu Estilo, Tu Huella</h2>
                     <p class="text-gray-700 leading-relaxed mb-4">
-                        Bienvenidos a <strong>TAPIZADO DE VOLANTES En Santiago</strong>, tu destino para la personalizacion automotriz en la Región Metropolitana. Ubicados en <strong>Av. Vicuna Mackenna 2362, Ñuñoa</strong>, nos hemos consolidado como los referentes indiscutidos en <strong>tapizado de volantes</strong> con un rating de <strong>5.0 en Google</strong> que avala nuestra calidad. Nuestra filosofia es simple: <strong>Tu Estilo, Tu Huella</strong>. Cada volante que tocamos lleva la impronta de quien lo conduce.
+                        Bienvenidos a <strong>Mono Cromático</strong>, tu destino para la personalizacion automotriz en la Región Metropolitana. Ubicados en <strong>Av. Vicuna Mackenna 2362, Ñuñoa</strong>, nos hemos consolidado como los referentes indiscutidos en <strong>tapizado de volantes</strong> con un rating de <strong>5.0 en Google</strong> que avala nuestra calidad. Nuestra filosofia es simple: <strong>Tu Estilo, Tu Huella</strong>. Cada volante que tocamos lleva la impronta de quien lo conduce.
                     </p>
                     <p class="text-gray-700 leading-relaxed mb-4">
                         Con anos de experiencia en el rubro, nuestro equipo de <strong>tapiceros de volantes de autos</strong> ha perfeccionado tecnicas artesanales que combinan tradicion e innovacion. No solo nos dedicamos al <strong>tapizado de volantes personalizados</strong>; tambien ofrecemos una linea exclusiva de <strong>polerones personalizados</strong> con disenos juveniles que reflejan la identidad de nuestros clientes. Cada <strong>volante personalizado</strong> que sale de nuestro taller es unico, creado especificamente para complementar tu estilo de conduccion.
@@ -204,7 +235,7 @@
                 <div class="w-full md:w-1/2 flex flex-col justify-center">
                     <h2 class="text-3xl md:text-4xl font-black mb-6 uppercase italic text-gray-900">Tapizado de Volantes Personalizados: Tu Estilo, Tu Huella</h2>
                     <p class="text-gray-700 leading-relaxed mb-4">
-                        En <strong>TAPIZADO DE VOLANTES En Santiago</strong>, cada <strong>volante personalizado</strong> es una obra de arte unica. Entendemos que tu volante es la extension de tu personalidad al volante, y por eso ofrecemos infinitas posibilidades de <strong>diseno juvenil</strong> y <strong>estilo personalizado</strong> para que tu coche refleje exactamente quien eres. <strong>Tu Estilo, Tu Huella</strong> se materializa en cada costura, cada color y cada textura que elegimos juntos.
+                        En <strong>Mono Cromático</strong>, cada <strong>volante personalizado</strong> es una obra de arte unica. Entendemos que tu volante es la extension de tu personalidad al volante, y por eso ofrecemos infinitas posibilidades de <strong>diseno juvenil</strong> y <strong>estilo personalizado</strong> para que tu coche refleje exactamente quien eres. <strong>Tu Estilo, Tu Huella</strong> se materializa en cada costura, cada color y cada textura que elegimos juntos.
                     </p>
                     <p class="text-gray-700 leading-relaxed mb-4">
                         Nuestras opciones de <strong>personalizacion de volantes</strong> incluyen una amplia gama de colores vibrantes y sobrios, costuras decorativas en contraste, inserciones de <strong>alcantara</strong> en zonas de agarre, combinaciones bicolor y patrones exclusivos que no encontraras en ningun otro <strong>taller de tapiceria</strong> en Santiago. Ya sea que prefieras un <strong>volante personalizado</strong> con un look agresivo para tu deportiva o un diseno elegante para tu sedan, tenemos la experiencia y los materiales para hacerlo realidad.
@@ -213,7 +244,7 @@
                         El proceso de crear un <strong>volante personalizado</strong> comienza con una consulta personalizada donde evaluamos tus preferencias de <strong>estilo personalizado</strong>, el tipo de uso que le das a tu vehiculo y las condiciones climaticas a las que esta expuesto. Cada <strong>diseno juvenil</strong> que proponemos esta pensado para resistir el paso del tiempo sin perder su apariencia impecable. La <strong>huella</strong> que dejas en tu volante es tu sello de distincion.
                     </p>
                     <p class="text-gray-700 leading-relaxed">
-                        No conformes tu volante con el aspecto de fabrica. Conviertelo en una declaracion de intenciones. En <strong>Tapizado de Volantes en Santiago</strong>, hacemos que cada recorrido sea una experiencia unica porque tu volante fue creado <strong>a tu estilo</strong>. <strong>Tu Estilo, Tu Huella</strong>: asi de simple, asi de personal.
+                        No conformes tu volante con el aspecto de fabrica. Conviertelo en una declaracion de intenciones. En <strong>Mono Cromático</strong>, hacemos que cada recorrido sea una experiencia unica porque tu volante fue creado <strong>a tu estilo</strong>. <strong>Tu Estilo, Tu Huella</strong>: asi de simple, asi de personal.
                     </p>
                 </div>
                 <div class="w-full md:w-1/2">
@@ -428,7 +459,7 @@
                 <div class="w-full md:w-1/2 flex flex-col justify-center">
                     <h2 class="text-3xl md:text-4xl font-black mb-6 uppercase italic text-gray-900">Interiores de Autos Personalizados y Forrado de Volantes</h2>
                     <p class="text-gray-700 leading-relaxed mb-4">
-                        La personalizacion completa de <strong>interiores de autos personalizados</strong> es el servicio definitivo para quienes quieren transformar radicalmente su vehiculo. En <strong>TAPIZADO DE VOLANTES En Santiago</strong>, ofrecemos un servicio integral que incluye el <strong>forrado de volante</strong>, la renovacion de asientos, paneles y todo el habitaculo. Los <strong>volantes custom</strong> que creamos son el punto focal de una transformacion total.
+                        La personalizacion completa de <strong>interiores de autos personalizados</strong> es el servicio definitivo para quienes quieren transformar radicalmente su vehiculo. En <strong>Mono Cromático</strong>, ofrecemos un servicio integral que incluye el <strong>forrado de volante</strong>, la renovacion de asientos, paneles y todo el habitaculo. Los <strong>volantes custom</strong> que creamos son el punto focal de una transformacion total.
                     </p>
                     <p class="text-gray-700 leading-relaxed mb-4">
                         Nuestras opciones de <strong>forrado de volantes</strong> abarcan desde el <strong>forrado de autos</strong> clasico en cuero hasta combinaciones modernas con alcantara y materiales innovadores. Cada <strong>cubre volante personalizado</strong> que creamos esta disenado para complementar la estetica general de tu interior. Los <strong>volantes para auto</strong> que ofrecemos se adaptan a todas las marcas y modelos del mercado.
@@ -464,23 +495,58 @@
         </div>
     </section>
 
-    <!-- LOCATIONS -->
-    <section class="py-16 bg-gray-900 text-white border-t border-gray-700">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl font-black mb-10 text-yellow-500 italic uppercase">Atencion a Domicilio en:</h2>
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 text-xs md:text-sm font-bold uppercase tracking-widest">
-                <div class="p-3 border border-gray-700">Buin</div>
-                <div class="p-3 border border-gray-700">Colina</div>
-                <div class="p-3 border border-gray-700">El Monte</div>
-                <div class="p-3 border border-gray-700">Cerrillos</div>
-                <div class="p-3 border border-gray-700">Conchali</div>
-                <div class="p-3 border border-gray-700">El Bosque</div>
-                <div class="p-3 border border-gray-700">Cerro Navia</div>
-                <div class="p-3 border border-gray-700">Estacion Central</div>
-                <div class="p-3 border border-gray-700">Maria Pinto</div>
-                <div class="p-3 border border-yellow-500 bg-yellow-500 text-black font-black">TODA LA RM</div>
+    <!-- SECCION: VEHICULOS -->
+    <section id="vehiculos" class="py-20 bg-gray-900 text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-black text-center mb-4 uppercase italic text-yellow-500">Trabajamos con Todas las Marcas de Vehículos</h2>
+            <p class="text-center text-gray-300 mb-12 max-w-3xl mx-auto">En <strong class="text-yellow-400">Mono Cromático</strong> realizamos <strong>tapizado de volantes</strong> para todas las marcas y modelos. Desde autos compactos hasta SUV premium, cada <strong>volante personalizado</strong> recibe un tratamiento artesanal de primera calidad.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-6xl mx-auto">
+                <div class="vehicle-card bg-gray-800 rounded-xl p-5 border border-gray-700"><h3 class="text-xl font-black text-yellow-500 mb-3">Chevrolet</h3><ul class="text-sm text-gray-300 space-y-1"><li><strong>Sonic</strong> 1.4L-1.6L (2012-2020)</li><li><strong>Spark</strong> 1.0L-1.2L (2010-2022)</li><li><strong>Sail</strong> 1.3L-1.5L (2011-2022)</li></ul><p class="text-xs text-gray-500 mt-3"><strong>Tapizado de volantes Chevrolet</strong> en Santiago</p></div>
+                <div class="vehicle-card bg-gray-800 rounded-xl p-5 border border-gray-700"><h3 class="text-xl font-black text-yellow-500 mb-3">Ford</h3><ul class="text-sm text-gray-300 space-y-1"><li><strong>Fiesta</strong> 1.6L (2005-2019)</li><li><strong>EcoSport</strong> 1.4L-2.0L (2005-2022)</li></ul><p class="text-xs text-gray-500 mt-3"><strong>Tapizado de volantes Ford</strong> en Santiago</p></div>
+                <div class="vehicle-card bg-gray-800 rounded-xl p-5 border border-gray-700"><h3 class="text-xl font-black text-yellow-500 mb-3">Honda</h3><ul class="text-sm text-gray-300 space-y-1"><li><strong>City</strong> 1.5L (2009-2022)</li><li><strong>CR-V</strong> 2.0L-2.4L (2005-2022)</li><li><strong>Civic</strong> 1.6L-2.0L (2005-2022)</li></ul><p class="text-xs text-gray-500 mt-3"><strong>Tapizado de volantes Honda</strong> en Santiago</p></div>
+                <div class="vehicle-card bg-gray-800 rounded-xl p-5 border border-gray-700"><h3 class="text-xl font-black text-yellow-500 mb-3">Hyundai</h3><ul class="text-sm text-gray-300 space-y-1"><li><strong>Grand i10</strong> 1.0L-1.2L (2013-2022)</li><li><strong>Tucson</strong> 1.6L-2.0L (2005-2022)</li><li><strong>Accent</strong> 1.4L-1.6L (2005-2022)</li></ul><p class="text-xs text-gray-500 mt-3"><strong>Tapizado de volantes Hyundai</strong> en Santiago</p></div>
+                <div class="vehicle-card bg-gray-800 rounded-xl p-5 border border-gray-700"><h3 class="text-xl font-black text-yellow-500 mb-3">Kia</h3><ul class="text-sm text-gray-300 space-y-1"><li><strong>Rio</strong> 1.2L-1.4L (2005-2022)</li><li><strong>Morning</strong> 1.0L-1.2L (2008-2022)</li></ul><p class="text-xs text-gray-500 mt-3"><strong>Tapizado de volantes Kia</strong> en Santiago</p></div>
+                <div class="vehicle-card bg-gray-800 rounded-xl p-5 border border-gray-700"><h3 class="text-xl font-black text-yellow-500 mb-3">MG</h3><ul class="text-sm text-gray-300 space-y-1"><li><strong>MG 3</strong> 1.5L (2014-2022)</li><li><strong>MG ZS</strong> 1.5L (2017-2022)</li></ul><p class="text-xs text-gray-500 mt-3"><strong>Tapizado de volantes MG</strong> en Santiago</p></div>
+                <div class="vehicle-card bg-gray-800 rounded-xl p-5 border border-gray-700"><h3 class="text-xl font-black text-yellow-500 mb-3">Mazda</h3><ul class="text-sm text-gray-300 space-y-1"><li><strong>CX-5</strong> 2.0L-2.5L (2012-2022)</li><li><strong>Mazda 3</strong> 1.6L-2.5L (2005-2022)</li></ul><p class="text-xs text-gray-500 mt-3"><strong>Tapizado de volantes Mazda</strong> en Santiago</p></div>
+                <div class="vehicle-card bg-gray-800 rounded-xl p-5 border border-gray-700"><h3 class="text-xl font-black text-yellow-500 mb-3">Nissan</h3><ul class="text-sm text-gray-300 space-y-1"><li><strong>Kicks</strong> 1.5L-1.6L (2016-2022)</li><li><strong>Versa</strong> 1.6L-1.8L (2012-2022)</li></ul><p class="text-xs text-gray-500 mt-3"><strong>Tapizado de volantes Nissan</strong> en Santiago</p></div>
+                <div class="vehicle-card bg-gray-800 rounded-xl p-5 border border-gray-700"><h3 class="text-xl font-black text-yellow-500 mb-3">Peugeot</h3><ul class="text-sm text-gray-300 space-y-1"><li><strong>3008</strong> 1.5L-2.0L (2009-2022)</li><li><strong>208</strong> 1.2L-1.6L (2013-2022)</li></ul><p class="text-xs text-gray-500 mt-3"><strong>Tapizado de volantes Peugeot</strong> en Santiago</p></div>
+                <div class="vehicle-card bg-gray-800 rounded-xl p-5 border border-gray-700"><h3 class="text-xl font-black text-yellow-500 mb-3">Renault</h3><ul class="text-sm text-gray-300 space-y-1"><li><strong>Logan</strong> 1.0L-1.6L (2005-2022)</li><li><strong>Duster</strong> 1.6L-2.0L (2012-2022)</li></ul><p class="text-xs text-gray-500 mt-3"><strong>Tapizado de volantes Renault</strong> en Santiago</p></div>
+                <div class="vehicle-card bg-gray-800 rounded-xl p-5 border border-gray-700"><h3 class="text-xl font-black text-yellow-500 mb-3">Subaru</h3><ul class="text-sm text-gray-300 space-y-1"><li><strong>XV</strong> 1.6L-2.0L (2012-2022)</li><li><strong>Forester</strong> 2.0L-2.5L (2005-2022)</li></ul><p class="text-xs text-gray-500 mt-3"><strong>Tapizado de volantes Subaru</strong> en Santiago</p></div>
+                <div class="vehicle-card bg-gray-800 rounded-xl p-5 border border-gray-700"><h3 class="text-xl font-black text-yellow-500 mb-3">Suzuki</h3><ul class="text-sm text-gray-300 space-y-1"><li><strong>Celerio</strong> 1.0L-1.2L (2008-2022)</li><li><strong>Baleno</strong> 1.4L (2016-2022)</li><li><strong>Swift</strong> 1.2L-1.4L (2005-2022)</li></ul><p class="text-xs text-gray-500 mt-3"><strong>Tapizado de volantes Suzuki</strong> en Santiago</p></div>
+                <div class="vehicle-card bg-gray-800 rounded-xl p-5 border border-gray-700"><h3 class="text-xl font-black text-yellow-500 mb-3">Toyota</h3><ul class="text-sm text-gray-300 space-y-1"><li><strong>Corolla</strong> 1.6L-2.0L (2005-2022)</li><li><strong>Yaris</strong> 1.3L-1.5L (2005-2022)</li></ul><p class="text-xs text-gray-500 mt-3"><strong>Tapizado de volantes Toyota</strong> en Santiago</p></div>
+                <div class="vehicle-card bg-gray-800 rounded-xl p-5 border border-gray-700"><h3 class="text-xl font-black text-yellow-500 mb-3">Fiat</h3><ul class="text-sm text-gray-300 space-y-1"><li><strong>Bravo tjet</strong> 1.4L</li></ul><p class="text-xs text-gray-500 mt-3"><strong>Tapizado de volantes Fiat</strong> en Santiago</p></div>
+                <div class="vehicle-card bg-gray-800 rounded-xl p-5 border border-gray-700"><h3 class="text-xl font-black text-yellow-500 mb-3">Volkswagen</h3><ul class="text-sm text-gray-300 space-y-1"><li><strong>Gol</strong> 1.6L (2005-2022)</li></ul><p class="text-xs text-gray-500 mt-3"><strong>Tapizado de volantes Volkswagen</strong> en Santiago</p></div>
+                <div class="vehicle-card bg-gray-800 rounded-xl p-5 border border-yellow-500 md:col-span-2 lg:col-span-3"><h3 class="text-xl font-black text-yellow-500 mb-3">Marcas Premium y Otros</h3><p class="text-sm text-gray-300">Tambien realizamos <strong>tapizado de volantes</strong> para <strong>BMW, Mercedes-Benz, Audi, Volvo, Jeep, Mitsubishi, Chery, Geely, BYD, JAC</strong> y mas. Consulta por tu marca via WhatsApp.</p></div>
             </div>
-            <p class="mt-10 text-gray-400 italic">Ubicacion Central: Av. Vicuna Mackenna 2362, Ñuñoa, Región Metropolitana, Chile.</p>
+        </div>
+    </section>
+
+    <!-- SECCION: COMUNAS -->
+    <section id="comunas" class="py-20 bg-white border-t">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-black text-center mb-4 uppercase italic text-gray-900">Trabajamos en Todas las Comunas de Santiago</h2>
+            <p class="text-center text-gray-600 mb-6 max-w-3xl mx-auto">Servicio de <strong>tapizado de volantes a domicilio</strong> en las 52 comunas de la <strong>Región Metropolitana de Santiago</strong>. Busca tu comuna y contactanos.</p>
+            <div class="max-w-md mx-auto mb-8">
+                <input type="text" id="comunaSearch" placeholder="Busca tu comuna..." class="w-full px-4 py-3 rounded-full border-2 border-yellow-500 focus:outline-none focus:ring-2 focus:ring-yellow-500 text-center font-bold" oninput="filterComunas(this.value)">
+            </div>
+            <div id="comunaResult" class="hidden text-center mb-8 bg-yellow-50 border-2 border-yellow-500 rounded-xl p-6 max-w-lg mx-auto">
+                <p class="text-xl font-black text-gray-900">Hacemos <strong>tapizado de volantes</strong> en <span id="comunaSelected" class="text-yellow-600"></span></p>
+                <p class="text-gray-600 mt-2 mb-4">Contactanos por WhatsApp para una cotización inmediata.</p>
+                <a href="https://wa.me/56992537569" class="inline-block bg-yellow-500 text-black px-8 py-3 rounded-full font-bold hover:bg-yellow-600 transition uppercase"><i class="fab fa-whatsapp mr-2"></i>Cotizar Ahora</a>
+            </div>
+            <div id="comunaGrid" class="flex flex-wrap justify-center gap-2 max-w-5xl mx-auto">
+                <span class="comuna-badge bg-gray-100 text-gray-700 px-3 py-2 rounded-full text-sm font-bold" data-comuna="Colina">Colina</span><span class="comuna-badge bg-gray-100 text-gray-700 px-3 py-2 rounded-full text-sm font-bold" data-comuna="Lampa">Lampa</span><span class="comuna-badge bg-gray-100 text-gray-700 px-3 py-2 rounded-full text-sm font-bold" data-comuna="Til Til">Til Til</span><span class="comuna-badge bg-gray-100 text-gray-700 px-3 py-2 rounded-full text-sm font-bold" data-comuna="Pirque">Pirque</span><span class="comuna-badge bg-gray-100 text-gray-700 px-3 py-2 rounded-full text-sm font-bold" data-comuna="Puente Alto">Puente Alto</span><span class="comuna-badge bg-gray-100 text-gray-700 px-3 py-2 rounded-full text-sm font-bold" data-comuna="San José de Maipo">San José de Maipo</span><span class="comuna-badge bg-gray-100 text-gray-700 px-3 py-2 rounded-full text-sm font-bold" data-comuna="Buin">Buin</span><span class="comuna-badge bg-gray-100 text-gray-700 px-3 py-2 rounded-full text-sm font-bold" data-comuna="Calera de Tango">Calera de Tango</span><span class="comuna-badge bg-gray-100 text-gray-700 px-3 py-2 rounded-full text-sm font-bold" data-comuna="Paine">Paine</span><span class="comuna-badge bg-gray-100 text-gray-700 px-3 py-2 rounded-full text-sm font-bold" data-comuna="San Bernardo">San Bernardo</span><span class="comuna-badge bg-gray-100 text-gray-700 px-3 py-2 rounded-full text-sm font-bold" data-comuna="Alhué">Alhué</span><span class="comuna-badge bg-gray-100 text-gray-700 px-3 py-2 rounded-full text-sm font-bold" data-comuna="Curacaví">Curacaví</span><span class="comuna-badge bg-gray-100 text-gray-700 px-3 py-2 rounded-full text-sm font-bold" data-comuna="María Pinto">María Pinto</span><span class="comuna-badge bg-gray-100 text-gray-700 px-3 py-2 rounded-full text-sm font-bold" data-comuna="Melipilla">Melipilla</span><span class="comuna-badge bg-gray-100 text-gray-700 px-3 py-2 rounded-full text-sm font-bold" data-comuna="San Pedro">San Pedro</span><span class="comuna-badge bg-gray-100 text-gray-700 px-3 py-2 rounded-full text-sm font-bold" data-comuna="Cerrillos">Cerrillos</span><span class="comuna-badge bg-gray-100 text-gray-700 px-3 py-2 rounded-full text-sm font-bold" data-comuna="Cerro Navia">Cerro Navia</span><span class="comuna-badge bg-gray-100 text-gray-700 px-3 py-2 rounded-full text-sm font-bold" data-comuna="Conchalí">Conchalí</span><span class="comuna-badge bg-gray-100 text-gray-700 px-3 py-2 rounded-full text-sm font-bold" data-comuna="El Bosque">El Bosque</span><span class="comuna-badge bg-gray-100 text-gray-700 px-3 py-2 rounded-full text-sm font-bold" data-comuna="Estación Central">Estación Central</span><span class="comuna-badge bg-gray-100 text-gray-700 px-3 py-2 rounded-full text-sm font-bold" data-comuna="Huechuraba">Huechuraba</span><span class="comuna-badge bg-gray-100 text-gray-700 px-3 py-2 rounded-full text-sm font-bold" data-comuna="Independencia">Independencia</span><span class="comuna-badge bg-gray-100 text-gray-700 px-3 py-2 rounded-full text-sm font-bold" data-comuna="La Cisterna">La Cisterna</span><span class="comuna-badge bg-gray-100 text-gray-700 px-3 py-2 rounded-full text-sm font-bold" data-comuna="La Granja">La Granja</span><span class="comuna-badge bg-gray-100 text-gray-700 px-3 py-2 rounded-full text-sm font-bold" data-comuna="La Florida">La Florida</span><span class="comuna-badge bg-gray-100 text-gray-700 px-3 py-2 rounded-full text-sm font-bold" data-comuna="La Pintana">La Pintana</span><span class="comuna-badge bg-gray-100 text-gray-700 px-3 py-2 rounded-full text-sm font-bold" data-comuna="La Reina">La Reina</span><span class="comuna-badge bg-gray-100 text-gray-700 px-3 py-2 rounded-full text-sm font-bold" data-comuna="Las Condes">Las Condes</span><span class="comuna-badge bg-gray-100 text-gray-700 px-3 py-2 rounded-full text-sm font-bold" data-comuna="Lo Barnechea">Lo Barnechea</span><span class="comuna-badge bg-gray-100 text-gray-700 px-3 py-2 rounded-full text-sm font-bold" data-comuna="Lo Espejo">Lo Espejo</span><span class="comuna-badge bg-gray-100 text-gray-700 px-3 py-2 rounded-full text-sm font-bold" data-comuna="Lo Prado">Lo Prado</span><span class="comuna-badge bg-gray-100 text-gray-700 px-3 py-2 rounded-full text-sm font-bold" data-comuna="Macul">Macul</span><span class="comuna-badge bg-gray-100 text-gray-700 px-3 py-2 rounded-full text-sm font-bold" data-comuna="Maipú">Maipú</span><span class="comuna-badge bg-gray-100 text-gray-700 px-3 py-2 rounded-full text-sm font-bold" data-comuna="Ñuñoa">Ñuñoa</span><span class="comuna-badge bg-gray-100 text-gray-700 px-3 py-2 rounded-full text-sm font-bold" data-comuna="Pedro Aguirre Cerda">Pedro Aguirre Cerda</span><span class="comuna-badge bg-gray-100 text-gray-700 px-3 py-2 rounded-full text-sm font-bold" data-comuna="Peñalolén">Peñalolén</span><span class="comuna-badge bg-gray-100 text-gray-700 px-3 py-2 rounded-full text-sm font-bold" data-comuna="Providencia">Providencia</span><span class="comuna-badge bg-gray-100 text-gray-700 px-3 py-2 rounded-full text-sm font-bold" data-comuna="Pudahuel">Pudahuel</span><span class="comuna-badge bg-gray-100 text-gray-700 px-3 py-2 rounded-full text-sm font-bold" data-comuna="Quilicura">Quilicura</span><span class="comuna-badge bg-gray-100 text-gray-700 px-3 py-2 rounded-full text-sm font-bold" data-comuna="Quinta Normal">Quinta Normal</span><span class="comuna-badge bg-gray-100 text-gray-700 px-3 py-2 rounded-full text-sm font-bold" data-comuna="Recoleta">Recoleta</span><span class="comuna-badge bg-gray-100 text-gray-700 px-3 py-2 rounded-full text-sm font-bold" data-comuna="Renca">Renca</span><span class="comuna-badge bg-gray-100 text-gray-700 px-3 py-2 rounded-full text-sm font-bold" data-comuna="San Miguel">San Miguel</span><span class="comuna-badge bg-gray-100 text-gray-700 px-3 py-2 rounded-full text-sm font-bold" data-comuna="San Joaquín">San Joaquín</span><span class="comuna-badge bg-gray-100 text-gray-700 px-3 py-2 rounded-full text-sm font-bold" data-comuna="San Ramón">San Ramón</span><span class="comuna-badge bg-gray-100 text-gray-700 px-3 py-2 rounded-full text-sm font-bold" data-comuna="Santiago">Santiago</span><span class="comuna-badge bg-gray-100 text-gray-700 px-3 py-2 rounded-full text-sm font-bold" data-comuna="Vitacura">Vitacura</span><span class="comuna-badge bg-gray-100 text-gray-700 px-3 py-2 rounded-full text-sm font-bold" data-comuna="El Monte">El Monte</span><span class="comuna-badge bg-gray-100 text-gray-700 px-3 py-2 rounded-full text-sm font-bold" data-comuna="Isla de Maipo">Isla de Maipo</span><span class="comuna-badge bg-gray-100 text-gray-700 px-3 py-2 rounded-full text-sm font-bold" data-comuna="Padre Hurtado">Padre Hurtado</span><span class="comuna-badge bg-gray-100 text-gray-700 px-3 py-2 rounded-full text-sm font-bold" data-comuna="Peñaflor">Peñaflor</span><span class="comuna-badge bg-gray-100 text-gray-700 px-3 py-2 rounded-full text-sm font-bold" data-comuna="Talagante">Talagante</span>
+            </div>
+            <div class="max-w-4xl mx-auto mt-12 text-gray-600 leading-relaxed text-center">
+                <p>En <strong>Mono Cromático</strong> cubrimos todo el <strong>tapizado de volantes zona norte</strong>, <strong>tapizado de volantes zona sur</strong>, <strong>tapizado de volantes zona oriente</strong> y <strong>tapizado de volantes zona poniente</strong>. Nuestro <strong>tapizado de volantes chile</strong> llega a tu puerta sin importar donde te encuentres en la <strong>Región Metropolitana de Santiago de Chile</strong>.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- UBICACION MINI -->
+    <section class="py-10 bg-gray-900 text-white border-t border-gray-700">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-400"><i class="fas fa-map-marker-alt text-yellow-500 mr-2"></i> Av. Vicuna Mackenna 2362, Ñuñoa, RM | <strong class="text-yellow-500">+56 9 9253 7569</strong> | Abierto 24h</p>
         </div>
     </section>
 
@@ -678,37 +744,51 @@
     <!-- FAQ SECTION -->
     <section id="faq" class="py-20 bg-gray-50 border-t">
         <div class="container mx-auto px-4 max-w-4xl">
-            <h2 class="text-4xl font-black text-center mb-16 uppercase italic">Preguntas y Respuestas</h2>
-            <div class="space-y-6">
-                <div class="bg-white p-6 shadow-md border-l-4 border-yellow-500">
-                    <h3 class="font-bold text-xl mb-3">Cual es el precio por tapizar un volante?</h3>
-                    <p class="text-gray-600">El <strong>precio tapizado volante coche</strong> varia segun el material elegido. Disponemos de <strong>cuero para tapizar volante</strong> premium, <strong>alcantara deportivo</strong> y piel natural. Ofrecemos el mejor <strong>precio tapizar volante cuero</strong> en Santiago. <strong>Cuanto cuesta tapizar un volante</strong>? Consultanos por WhatsApp para una cotizacion personalizada. <strong>Tu Estilo, Tu Huella</strong> tiene precios accesibles.</p>
+            <h2 class="text-3xl md:text-4xl font-black text-center mb-16 uppercase italic">Preguntas Frecuentes sobre Tapizado de Volantes</h2>
+            <div class="space-y-5">
+                <div class="bg-white p-6 shadow-md border-l-4 border-yellow-500 rounded-r-lg"><h3 class="font-bold text-lg mb-3"><i class="fas fa-dollar-sign text-yellow-500 mr-2"></i>¿Cuánto cuesta tapizar un volante en Santiago?</h3><p class="text-gray-600 text-sm leading-relaxed">El <strong>precio tapizar volante</strong> depende del material y la complejidad del diseño. En <strong>Mono Cromático</strong> ofrecemos <strong>tapizado de volante en cuero</strong> desde precios accesibles, <strong>tapizar volante alcantara</strong> para un look deportivo, y <strong>tapizado volante piel</strong> premium. Cada <strong>tapizar volante coche precio</strong> se cotiza de forma personalizada. Si te preguntas <strong>cuanto cuesta tapizar un volante</strong>, contactanos por WhatsApp y te entregamos un presupuesto en minutos.</p></div>
+                <div class="bg-white p-6 shadow-md border-l-4 border-yellow-500 rounded-r-lg"><h3 class="font-bold text-lg mb-3"><i class="fas fa-home text-yellow-500 mr-2"></i>¿Realizan tapizado de volantes a domicilio?</h3><p class="text-gray-600 text-sm leading-relaxed">Sí. En <strong>Mono Cromático</strong> somos especialistas en <strong>tapizado de autos a domicilio</strong>. Nuestro <strong>servicio de tapicería</strong> móvil cubre las 52 comunas de la RM. Podemos <strong>tapizar volante sin desmontar</strong> en muchos modelos, lo que acelera el proceso. No necesitas moverte de casa; nosotros llegamos con todo el equipamiento necesario.</p></div>
+                <div class="bg-white p-6 shadow-md border-l-4 border-yellow-500 rounded-r-lg"><h3 class="font-bold text-lg mb-3"><i class="fas fa-clock text-yellow-500 mr-2"></i>¿Cuánto demora el tapizado de un volante?</h3><p class="text-gray-600 text-sm leading-relaxed">El <strong>tapizar volante de coche</strong> toma entre 2 a 4 horas dependiendo del material y diseño. Si te preguntas <strong>cuanto demoran</strong>, la respuesta es: el mismo día. Podemos <strong>tapizar volante sin desmontar</strong> en muchos casos, lo que reduce aún más el tiempo. En <strong>Mono Cromático</strong>, valoramos tu tiempo y cumplimos con los plazos acordados.</p></div>
+                <div class="bg-white p-6 shadow-md border-l-4 border-yellow-500 rounded-r-lg"><h3 class="font-bold text-lg mb-3"><i class="fas fa-layer-group text-yellow-500 mr-2"></i>¿Qué materiales usan para tapizar volantes?</h3><p class="text-gray-600 text-sm leading-relaxed">Trabajamos con <strong>cuero para tapizar volante</strong> premium importado, <strong>alcantara</strong> certificado automotriz y piel genuina. El <strong>tapizado de volantes en cuero</strong> es ideal para elegancia y durabilidad, mientras que el <strong>forrado de volante en cuero</strong> tipo piel vuelta ofrece un look agresivo. También ofrecemos <strong>cubre volante de cuero natural</strong> y combinaciones bicolor personalizadas.</p></div>
+                <div class="bg-white p-6 shadow-md border-l-4 border-yellow-500 rounded-r-lg"><h3 class="font-bold text-lg mb-3"><i class="fas fa-car text-yellow-500 mr-2"></i>¿Trabajan con mi marca de vehículo?</h3><p class="text-gray-600 text-sm leading-relaxed">Sí, trabajamos con <strong>volantes para auto</strong> de todas las marcas: Toyota, Chevrolet, Hyundai, Kia, Nissan, Renault, Peugeot, Ford, Honda, Mazda, Suzuki, Subaru, BMW, Mercedes-Benz, Audi, Volkswagen y más. Realizamos <strong>tapizado volante BMW</strong>, <strong>tapizado volante Mercedes</strong>, <strong>tapizado volante Toyota</strong> y cualquier marca que tengas.</p></div>
+                <div class="bg-white p-6 shadow-md border-l-4 border-yellow-500 rounded-r-lg"><h3 class="font-bold text-lg mb-3"><i class="fas fa-map text-yellow-500 mr-2"></i>¿En qué comunas de Santiago trabajan?</h3><p class="text-gray-600 text-sm leading-relaxed">Cubrimos <strong>tapizado de volantes zona norte</strong>, <strong>tapizado de volantes zona sur</strong>, <strong>tapizado de volantes zona oriente</strong> y <strong>tapizado de volantes zona poniente</strong>. Somos tu <strong>tapicería de autos en Santiago</strong> de confianza con cobertura en las 52 comunas de la RM, incluyendo Ñuñoa, Maipú, Las Condes, La Florida, Providencia, Puente Alto y todas las demás.</p></div>
+                <div class="bg-white p-6 shadow-md border-l-4 border-yellow-500 rounded-r-lg"><h3 class="font-bold text-lg mb-3"><i class="fas fa-tools text-yellow-500 mr-2"></i>¿Qué es el retapizado o reparación de volantes?</h3><p class="text-gray-600 text-sm leading-relaxed">El <strong>retapizado de volante</strong> es un proceso de <strong>reparación de volantes de autos</strong> que consiste en retirar el material dañado, restaurar la espuma interior y aplicar un nuevo revestimiento. La <strong>reparación de volantes</strong> devuelve a tu volante su aspecto y tacto originales. Es mucho más económico que comprar un volante nuevo y el resultado es superior.</p></div>
+                <div class="bg-white p-6 shadow-md border-l-4 border-yellow-500 rounded-r-lg"><h3 class="font-bold text-lg mb-3"><i class="fas fa-car-side text-yellow-500 mr-2"></i>¿Hacen tapicería completa del auto o solo volantes?</h3><p class="text-gray-600 text-sm leading-relaxed">En <strong>Mono Cromático</strong> ofrecemos <strong>tapicería de autos en Santiago</strong> completa: asientos, paneles, cielos de techo, tableros y más. Somos tu <strong>tapicería Ñuñoa</strong> de confianza. También realizamos <strong>interiores de autos personalizados</strong> integrales y <strong>tapizado para autos</strong> parcial. Tanto si necesitas un detalle como una transformación total, estamos listos.</p></div>
+                <div class="bg-white p-6 shadow-md border-l-4 border-yellow-500 rounded-r-lg"><h3 class="font-bold text-lg mb-3"><i class="fas fa-exchange-alt text-yellow-500 mr-2"></i>¿Qué diferencia hay entre cuero y alcantara para volantes?</h3><p class="text-gray-600 text-sm leading-relaxed">El <strong>tapizado de volante en cuero</strong> ofrece elegancia clásica, fácil limpieza y larga durabilidad. Es ideal para uso diario. El <strong>tapizar volante alcantara</strong> proporciona un agarre superior ideal para conducción deportiva, con un look racing. El <strong>tapizar volante alcantara precio</strong> es ligeramente superior pero vale cada peso por el rendimiento. Ambos son materiales premium en <strong>Mono Cromático</strong>.</p></div>
+                <div class="bg-white p-6 shadow-md border-l-4 border-yellow-500 rounded-r-lg"><h3 class="font-bold text-lg mb-3"><i class="fas fa-chart-line text-yellow-500 mr-2"></i>¿El tapizado de volantes revaloriza mi auto?</h3><p class="text-gray-600 text-sm leading-relaxed">Absolutamente. Un <strong>tapizado de volante de coche</strong> profesional revaloriza tu vehículo significativamente. El <strong>costura volante</strong> artesanal y los materiales premium que usamos en <strong>Mono Cromático</strong> transforman la percepción del interior. Un comprador nota inmediatamente un <strong>volante personalizado</strong> bien hecho. Es una de las mejores inversiones para mantener tu auto.</p></div>
+                <div class="bg-white p-6 shadow-md border-l-4 border-yellow-500 rounded-r-lg"><h3 class="font-bold text-lg mb-3"><i class="fas fa-tshirt text-yellow-500 mr-2"></i>¿Tienen polerones personalizados?</h3><p class="text-gray-600 text-sm leading-relaxed">Sí. Además de <strong>tapizado de volantes</strong>, ofrecemos <strong>polerones personalizados</strong> con <strong>diseño juvenil</strong> exclusivo. Nuestra línea de ropa refleja la filosofía <strong>Tu Estilo, Tu Huella</strong>. Son prendas con estampados únicos que no encontrarás en ninguna tienda. También hacemos <strong>volantes de ropa</strong> y prendas <strong>a tu estilo</strong>. Somos una tienda de <strong>diseño juvenil</strong> en Santiago.</p></div>
+                <div class="bg-white p-6 shadow-md border-l-4 border-yellow-500 rounded-r-lg"><h3 class="font-bold text-lg mb-3"><i class="fab fa-whatsapp text-yellow-500 mr-2"></i>¿Cómo puedo cotizar un tapizado de volante?</h3><p class="text-gray-600 text-sm leading-relaxed">Es muy fácil. Contacta a <strong>Mono Cromático</strong> por WhatsApp al <strong>+56 9 9253 7569</strong> o llámanos directamente. Envíanos fotos de tu volante actual y nos dices qué material y diseño prefieres. Te entregamos una <strong>cotización</strong> personalizada al instante. También puedes visitarnos en <strong>Av. Vicuña Mackenna 2362, Ñuñoa</strong>. Estamos abiertos las 24 horas.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO SECTION -->
+    <section id="contacto" class="py-20 bg-gray-900 text-white border-t">
+        <div class="container mx-auto px-4 max-w-4xl text-center">
+            <h2 class="text-3xl md:text-4xl font-black mb-10 uppercase italic text-yellow-500">Contacta a Mono Cromático</h2>
+            <div class="grid md:grid-cols-3 gap-6 mb-10">
+                <div class="bg-gray-800 rounded-xl p-6 border border-gray-700">
+                    <i class="fas fa-map-marker-alt text-yellow-500 text-3xl mb-4"></i>
+                    <h3 class="font-bold text-lg mb-2">Dirección</h3>
+                    <p class="text-gray-400 text-sm">Av. Vicuña Mackenna 2362, Ñuñoa, Región Metropolitana, Chile</p>
                 </div>
-                <div class="bg-white p-6 shadow-md border-l-4 border-yellow-500">
-                    <h3 class="font-bold text-xl mb-3">Realizan el trabajo a domicilio?</h3>
-                    <p class="text-gray-600">Si! Somos especialistas en <strong>tapizado de autos a domicilio</strong>. Cubrimos toda la Región Metropolitana incluyendo Ñuñoa, Buin, Colina, Cerrillos, Conchali y toda la zona norte y sur de la RM. Nuestro <strong>servicio de tapiceria</strong> movil llega a tu hogar u oficina.</p>
+                <div class="bg-gray-800 rounded-xl p-6 border border-gray-700">
+                    <i class="fab fa-whatsapp text-yellow-500 text-3xl mb-4"></i>
+                    <h3 class="font-bold text-lg mb-2">WhatsApp</h3>
+                    <a href="https://wa.me/56992537569" class="text-yellow-500 font-bold text-lg hover:text-white transition">+56 9 9253 7569</a>
                 </div>
-                <div class="bg-white p-6 shadow-md border-l-4 border-yellow-500">
-                    <h3 class="font-bold text-xl mb-3">Cuanto tiempo demora el tapizado?</h3>
-                    <p class="text-gray-600">Dependiendo del diseno, el proceso de <strong>forrar volante de cuero</strong> o <strong>alcantara</strong> toma entre 2 a 4 horas. Tambien podemos <strong>tapizar volante sin desmontar</strong> segun la necesidad del vehiculo. Si te preguntas <strong>cuanto demoran</strong>, la respuesta es: muy poco. <strong>Tu Estilo, Tu Huella</strong> se hace realidad el mismo dia.</p>
-                </div>
-                <div class="bg-white p-6 shadow-md border-l-4 border-yellow-500">
-                    <h3 class="font-bold text-xl mb-3">Trabajan con marcas especificas?</h3>
-                    <p class="text-gray-600">Efectivamente. Realizamos <strong>tapizado volante BMW</strong> (E46, E90), <strong>tapizar volante Mercedes</strong> (W211), y modelos populares como <strong>Peugeot 206</strong>, <strong>Peugeot 308</strong>, <strong>Citroen C4</strong> y <strong>Seat Leon 2</strong>. Tambien hacemos <strong>reparacion de volantes de autos</strong> de cualquier marca.</p>
-                </div>
-                <div class="bg-white p-6 shadow-md border-l-4 border-yellow-500">
-                    <h3 class="font-bold text-xl mb-3">Que son los polerones personalizados?</h3>
-                    <p class="text-gray-600">Ademas de <strong>tapizado de volantes</strong>, ofrecemos una linea de <strong>polerones personalizados</strong> con <strong>diseno juvenil</strong> unico. Son prendas de ropa con estampados exclusivos que reflejan nuestra filosofia <strong>Tu Estilo, Tu Huella</strong>. Son perfectos para quienes buscan ropa con personalidad en Santiago.</p>
-                </div>
-                <div class="bg-white p-6 shadow-md border-l-4 border-yellow-500">
-                    <h3 class="font-bold text-xl mb-3">Cual es la diferencia entre cuero y alcantara?</h3>
-                    <p class="text-gray-600">El <strong>tapizado de volante en cuero</strong> ofrece elegancia clasica, facil limpieza y larga durabilidad. El <strong>tapizar volante alcantara</strong> proporciona un agarre superior ideal para conduccion deportiva, con un look racing unico. Ambos materiales son de alta calidad y cada <strong>volante personalizado</strong> se adapta a tu estilo de conduccion.</p>
-                </div>
-                <div class="bg-white p-6 shadow-md border-l-4 border-yellow-500">
-                    <h3 class="font-bold text-xl mb-3">Donde estan ubicados?</h3>
-                    <p class="text-gray-600">Nuestra ubicacion principal es <strong>Av. Vicuna Mackenna 2362, Ñuñoa, Región Metropolitana, Chile</strong>. Sin embargo, al ser un servicio de <strong>tapizado de autos a domicilio</strong>, no necesitas venir hasta nosotros; nosotros llegamos a cualquier punto de la RM. Estamos abiertos las 24 horas.</p>
+                <div class="bg-gray-800 rounded-xl p-6 border border-gray-700">
+                    <i class="fas fa-phone text-yellow-500 text-3xl mb-4"></i>
+                    <h3 class="font-bold text-lg mb-2">Teléfono</h3>
+                    <a href="tel:+56992537569" class="text-yellow-500 font-bold text-lg hover:text-white transition">+56 9 9253 7569</a>
                 </div>
             </div>
+            <div class="flex items-center justify-center gap-1 mb-6">
+                <i class="fas fa-star text-yellow-500"></i><i class="fas fa-star text-yellow-500"></i><i class="fas fa-star text-yellow-500"></i><i class="fas fa-star text-yellow-500"></i><i class="fas fa-star text-yellow-500"></i>
+                <span class="text-white font-bold ml-3">5.0 en Google Reviews</span>
+            </div>
+            <p class="text-gray-400 mb-6">Abierto las 24 horas · Lunes a Domingo</p>
+            <a href="https://wa.me/56992537569" class="inline-block bg-yellow-500 text-black px-12 py-4 rounded-full font-black text-lg hover:scale-105 transition shadow-2xl uppercase"><i class="fab fa-whatsapp mr-2"></i>Cotizar por WhatsApp</a>
         </div>
     </section>
 
@@ -730,9 +810,9 @@
     <!-- FOOTER -->
     <footer class="bg-black text-white py-12 text-center border-t border-yellow-500/20">
         <div class="container mx-auto px-4">
-            <img src="images/tapizado-de-volantes-santiago-chile-serca-de-mi.png" alt="Logo Footer Tapizado de Volantes Santiago Chile" class="h-16 mx-auto mb-6">
-            <p class="font-black text-yellow-500 mb-2 text-xl italic uppercase">TAPIZADODEVOLANTE.COM</p>
-            <p class="text-sm text-gray-500 uppercase tracking-widest mb-8 font-bold">Tapizado de Volantes en Santiago | Tu Estilo, Tu Huella | Especialistas en Volantes y Personalizacion</p>
+            <img src="images/tapizado-de-volantes-santiago-chile-serca-de-mi.png" alt="Logo Mono Cromático Tapizado de Volantes" class="h-16 mx-auto mb-6">
+            <p class="font-black text-yellow-500 mb-2 text-xl italic uppercase">MONO CROMÁTICO — TAPIZADODEVOLANTE.COM</p>
+            <p class="text-sm text-gray-500 uppercase tracking-widest mb-8 font-bold">Tapizado de Volantes en Santiago | Tu Estilo, Tu Huella | Polerones Personalizados</p>
             <div class="grid md:grid-cols-2 gap-4 max-w-2xl mx-auto text-gray-300">
                 <p><i class="fab fa-whatsapp text-yellow-500 mr-2"></i> +56 9 9253 7569</p>
                 <p><i class="fas fa-map-marker-alt text-yellow-500 mr-2"></i> Av. Vicuna Mackenna 2362, Ñuñoa, RM, Chile.</p>
@@ -845,6 +925,46 @@
             document.addEventListener('mousemove', moveHandler);
             document.addEventListener('touchmove', moveHandler);
         }
+
+        // Comuna Search & Filter
+        function filterComunas(query) {
+            const badges = document.querySelectorAll('.comuna-badge');
+            const result = document.getElementById('comunaResult');
+            const q = query.toLowerCase().trim();
+            let found = false;
+            badges.forEach(badge => {
+                const comuna = badge.getAttribute('data-comuna').toLowerCase();
+                if (q === '' || comuna.includes(q)) {
+                    badge.style.display = '';
+                    if (q !== '' && comuna === q) {
+                        badge.classList.add('highlight');
+                        found = true;
+                        document.getElementById('comunaSelected').textContent = badge.textContent;
+                        result.classList.remove('hidden');
+                    } else {
+                        badge.classList.remove('highlight');
+                    }
+                } else {
+                    badge.style.display = 'none';
+                }
+            });
+            if (q === '' || !found) {
+                result.classList.add('hidden');
+                badges.forEach(b => b.classList.remove('highlight'));
+            }
+        }
+
+        // Click on comuna badge
+        document.querySelectorAll('.comuna-badge').forEach(badge => {
+            badge.onclick = function() {
+                document.querySelectorAll('.comuna-badge').forEach(b => b.classList.remove('highlight'));
+                this.classList.add('highlight');
+                document.getElementById('comunaSelected').textContent = this.textContent;
+                document.getElementById('comunaResult').classList.remove('hidden');
+                document.getElementById('comunaSearch').value = this.textContent;
+                filterComunas(this.textContent);
+            };
+        });
     </script>
 
 </body>
