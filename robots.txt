@@ -1,9 +1,58 @@
-# robots.txt - Mono Cromático - Tapizado de Volantes
+# robots.txt - Mono Cromático - Tapizado de Volantes en Santiago
+# https://tapizadodevolante.com
+
+# Sitemaps
+Sitemap: https://tapizadodevolante.com/sitemap.xml
+Sitemap: https://tapizadodevolante.com/image-sitemap.xml
+
+# Permitir todo el acceso a los crawlers (incluyendo imágenes)
 User-agent: *
 Allow: /
 Allow: /images/
 Allow: /comunas/
+Allow: /vehiculos.html
+Allow: /galeria.html
+Allow: /servicios.html
 
+# Carpetas técnicas que no se deben rastrear
 Disallow: /cdn-cgi/
 
-Sitemap: https://tapizadodevolante.com/sitemap.xml
+# Permitir indexación de imágenes a Google
+User-agent: Googlebot-Image
+Allow: /
+Allow: /images/
+
+# Permitir indexación de imágenes a Bing
+User-agent: msnbot-media
+Allow: /
+Allow: /images/
+
+# Permitir Googlebot sin restricciones
+User-agent: Googlebot
+Allow: /
+
+# Permitir Bingbot sin restricciones
+User-agent: Bingbot
+Allow: /
+
+# Bloquear bots maliciosos o innecesarios
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: Baiduspider
+Disallow: /
+
+User-agent: Sogou
+Disallow: /
+
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+User-agent: YandexBot
+Crawl-delay: 10
