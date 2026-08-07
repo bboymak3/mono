@@ -1,9 +1,9 @@
+# robots.txt - Mono Cromático - Tapizado de Volantes
 User-agent: *
 Allow: /
 Allow: /images/
+Allow: /comunas/
 
-# Evitar rastreo de carpetas técnicas de Cloudflare si existen
 Disallow: /cdn-cgi/
 
-# Indicar la ruta del mapa del sitio para todos los buscadores
 Sitemap: https://tapizadodevolante.com/sitemap.xml
