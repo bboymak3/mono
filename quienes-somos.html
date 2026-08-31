@@ -50,6 +50,44 @@ img.h-full.object-cover{min-height:100%}
 .vehicle-card-col.highlight-target .vehicle-card{box-shadow:0 0 0 3px #EAB308,0 12px 24px rgba(234,179,8,.3);transform:translateY(-4px)}
 .nav-btn{border-radius:9999px!important;display:inline-flex;align-items:center;justify-content:center}
 </style>
+
+    <style>
+        .btn-galeria-gold {
+            background: linear-gradient(135deg, #FFD700, #FFA500) !important;
+            color: #000 !important;
+            font-weight: 900 !important;
+            font-size: 1rem !important;
+            padding: 10px 24px !important;
+            border-radius: 9999px !important;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.6), 0 0 30px rgba(255, 165, 0, 0.4) !important;
+            animation: goldGlow 2s ease-in-out infinite !important;
+            transition: all 0.3s !important;
+            display: inline-flex !important;
+            align-items: center;
+            gap: 6px;
+        }
+        .btn-galeria-gold:hover {
+            transform: scale(1.1) !important;
+            box-shadow: 0 0 25px rgba(255, 215, 0, 0.9), 0 0 50px rgba(255, 165, 0, 0.6) !important;
+        }
+        @keyframes goldGlow {
+            0%, 100% { box-shadow: 0 0 15px rgba(255, 215, 0, 0.6), 0 0 30px rgba(255, 165, 0, 0.4); }
+            50% { box-shadow: 0 0 25px rgba(255, 215, 0, 0.9), 0 0 50px rgba(255, 165, 0, 0.6); }
+        }
+        .gallery-gold-border {
+            border: 3px solid #FFD700 !important;
+            border-radius: 12px !important;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3), 0 0 10px rgba(255, 215, 0, 0.2) !important;
+            transition: all 0.3s !important;
+        }
+        .gallery-gold-border:hover {
+            box-shadow: 0 8px 30px rgba(255, 215, 0, 0.5), 0 0 20px rgba(255, 215, 0, 0.3) !important;
+            border-color: #FFA500 !important;
+        }
+    </style>
+
 </head>
 <body class="bg-gray-50 text-gray-900 font-poppins flex flex-col min-h-screen pb-20">
 <nav class="fixed w-full z-50 bg-black text-white shadow-xl border-b border-yellow-500/30">
