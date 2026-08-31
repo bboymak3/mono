@@ -184,4 +184,18 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape"){closeModal(
 function filterComunas(query){const badges=document.querySelectorAll(".comuna-badge");const result=document.getElementById("comunaResult");const q=query.toLowerCase().trim();let found=false;badges.forEach(badge=>{const comuna=badge.getAttribute("data-comuna").toLowerCase();if(q===""||comuna.includes(q)){badge.style.display="";if(q!==""&&comuna===q){badge.classList.add("highlight");found=true;document.getElementById("comunaSelected").textContent=badge.textContent;result.classList.remove("hidden");}else{badge.classList.remove("highlight");}}else{badge.style.display="none";}});if(q===""||!found){result.classList.add("hidden");badges.forEach(b=>b.classList.remove("highlight"));}}
 document.querySelectorAll(".comuna-badge").forEach(badge=>{badge.onclick=function(){document.querySelectorAll(".comuna-badge").forEach(b=>b.classList.remove("highlight"));this.classList.add("highlight");document.getElementById("comunaSelected").textContent=this.textContent;document.getElementById("comunaResult").classList.remove("hidden");document.getElementById("comunaSearch").value=this.textContent;filterComunas(this.textContent);};});
 </script>
+
+    <!-- Footer -->
+    <footer class="bg-black text-gray-400 py-8 border-t border-yellow-500/20">
+        <div class="container mx-auto px-4 text-center">
+            <p class="mb-2">&copy; Monocromatico. Todos los derechos reservados.</p>
+            <p class="text-sm">
+                <a href="http://coporo.pages.dev/" target="_blank" rel="noopener" class="hover:text-yellow-500 transition">Página web desarrollada por Grupo 360 Soluciones</a>
+            </p>
+            <p class="text-sm mt-1">
+                <a href="https://en-santiago.pages.dev/negocio/tapizado-de-volantes/tapizado-de-volantes-santiago" target="_blank" rel="noopener" class="hover:text-yellow-500 transition">Diseño de páginas webs - directorio de empresas Locales</a>
+            </p>
+        </div>
+    </footer>
+
 </body></html>
