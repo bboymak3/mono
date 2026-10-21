@@ -107,6 +107,14 @@
     document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape' && modal && modal.classList.contains('open')) cerrar();
     });
+    // Deja espacio bajo el footer para que la barra fija de contacto no lo tape
+    function ajustarEspacioFooter() {
+        var barra = document.querySelector('body > .fixed.bottom-0');
+        if (barra) document.body.style.paddingBottom = barra.offsetHeight + 'px';
+    }
+    window.addEventListener('load', ajustarEspacioFooter);
+    window.addEventListener('resize', ajustarEspacioFooter);
+
     if (location.hash === '#marcas') {
         if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', abrir);
         else abrir();

@@ -32,6 +32,9 @@ body {
 }
 /* Respeta la barra inferior del iPhone (home indicator) */
 body.pb-20 { padding-bottom: calc(5rem + var(--safe-bottom)); }
+/* La barra fija de contacto mide más que pb-20 y tapaba el footer;
+   marcas-modal.js ajusta el valor exacto según su altura real */
+body.pb-20:has(> .fixed.bottom-0) { padding-bottom: calc(8rem + var(--safe-bottom)); }
 
 img { -webkit-user-drag: none; }
 
