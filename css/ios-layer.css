@@ -1,0 +1,229 @@
+/* ==========================================================================
+   Capa iOS — estilo iPhone / Apple para Mono Cromático
+   Se carga después de Tailwind y de los <style> de cada página, así que
+   refina sin reescribir el diseño existente.
+   ========================================================================== */
+
+:root {
+    --ios-font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Poppins", "Helvetica Neue", Arial, sans-serif;
+    --ios-ease: cubic-bezier(0.32, 0.72, 0, 1);
+    --ios-radius: 14px;
+    --ios-radius-lg: 22px;
+    --ios-glass: rgba(16, 16, 18, 0.72);
+    --ios-glass-light: rgba(255, 255, 255, 0.72);
+    --ios-hairline: rgba(255, 255, 255, 0.12);
+    --ios-shadow: 0 10px 30px rgba(0, 0, 0, 0.18), 0 1px 3px rgba(0, 0, 0, 0.08);
+    --ios-gold: #EAB308;
+    --safe-top: env(safe-area-inset-top, 0px);
+    --safe-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* ---------- Base y rendimiento ---------- */
+html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+body {
+    font-family: var(--ios-font);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: transparent;
+    text-rendering: optimizeLegibility;
+}
+/* Respeta la barra inferior del iPhone (home indicator) */
+body.pb-20 { padding-bottom: calc(5rem + var(--safe-bottom)); }
+
+img { -webkit-user-drag: none; }
+
+/* background-attachment: fixed es lento y falla en iOS Safari */
+@supports (-webkit-touch-callout: none) {
+    .hero-bg { background-attachment: scroll !important; }
+}
+@media (max-width: 1024px) {
+    .hero-bg { background-attachment: scroll !important; }
+}
+
+/* ---------- Barra de navegación translúcida ---------- */
+nav.fixed {
+    background-color: var(--ios-glass) !important;
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+    border-bottom: 0.5px solid var(--ios-hairline) !important;
+    box-shadow: none !important;
+    padding-top: var(--safe-top);
+}
+nav.fixed .mobile-menu { background: transparent !important; }
+
+/* ---------- Botones y controles ---------- */
+a, button, [role="button"] {
+    touch-action: manipulation;
+    transition-timing-function: var(--ios-ease);
+}
+a[class*="px-"][class*="py-"]:not(.rounded-none), button[class*="px-"][class*="py-"]:not(.rounded-none) {
+    border-radius: 9999px;
+}
+a[class*="px-"][class*="py-"]:active, button:active, .vehicle-card:active {
+    transform: scale(0.97);
+    transition-duration: 0.1s;
+}
+:focus-visible {
+    outline: 3px solid rgba(234, 179, 8, 0.6);
+    outline-offset: 2px;
+    border-radius: 10px;
+}
+input, textarea, select {
+    font-family: inherit;
+    font-size: max(16px, 1em); /* evita el zoom automático de iOS al enfocar */
+    border-radius: var(--ios-radius) !important;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+/* ---------- Tarjetas ---------- */
+.vehicle-card, .rounded-xl, .rounded-2xl {
+    border-radius: var(--ios-radius-lg) !important;
+}
+.vehicle-card {
+    box-shadow: var(--ios-shadow);
+    transition: transform 0.35s var(--ios-ease), box-shadow 0.35s var(--ios-ease);
+}
+
+/* ---------- Barra de contacto inferior ---------- */
+.fixed.bottom-0.left-0.right-0 {
+    background-color: var(--ios-glass-light) !important;
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+    border-top: 0.5px solid rgba(0, 0, 0, 0.1) !important;
+    padding-bottom: calc(1rem + var(--safe-bottom)) !important;
+}
+
+/* ---------- Modales con fondo desenfocado ---------- */
+#imageModal, #vehicleModal {
+    -webkit-backdrop-filter: blur(18px);
+    backdrop-filter: blur(18px);
+}
+
+/* ---------- Scroll ---------- */
+.overflow-y-auto, .overflow-x-auto {
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+}
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-thumb { background: rgba(128, 128, 128, 0.4); border-radius: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+
+/* ==========================================================================
+   Modal "Marcas que tapizamos" (hoja inferior estilo iOS)
+   ========================================================================== */
+.marcas-sheet-backdrop {
+    position: fixed; inset: 0; z-index: 70;
+    background: rgba(0, 0, 0, 0.45);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    opacity: 0; visibility: hidden;
+    transition: opacity 0.35s var(--ios-ease), visibility 0s linear 0.35s;
+    display: flex; align-items: flex-end; justify-content: center;
+}
+.marcas-sheet-backdrop.open {
+    opacity: 1; visibility: visible;
+    transition: opacity 0.35s var(--ios-ease);
+}
+.marcas-sheet {
+    width: 100%; max-width: 640px; max-height: 88vh;
+    display: flex; flex-direction: column;
+    background: rgba(28, 28, 30, 0.92);
+    -webkit-backdrop-filter: saturate(180%) blur(30px);
+    backdrop-filter: saturate(180%) blur(30px);
+    color: #fff;
+    border-radius: 28px 28px 0 0;
+    border: 0.5px solid var(--ios-hairline);
+    box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.4);
+    padding-bottom: var(--safe-bottom);
+    transform: translateY(100%);
+    transition: transform 0.45s var(--ios-ease);
+    font-family: var(--ios-font);
+}
+.marcas-sheet-backdrop.open .marcas-sheet { transform: translateY(0); }
+@media (min-width: 768px) {
+    .marcas-sheet-backdrop { align-items: center; }
+    .marcas-sheet { border-radius: 28px; transform: translateY(24px) scale(0.96); opacity: 0;
+        transition: transform 0.4s var(--ios-ease), opacity 0.3s var(--ios-ease); }
+    .marcas-sheet-backdrop.open .marcas-sheet { transform: none; opacity: 1; }
+}
+.marcas-grabber {
+    width: 36px; height: 5px; border-radius: 3px;
+    background: rgba(255, 255, 255, 0.3);
+    margin: 8px auto 0; flex-shrink: 0;
+}
+.marcas-header {
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    padding: 14px 20px 10px;
+}
+.marcas-header h2 { font-size: 1.35rem; font-weight: 700; letter-spacing: -0.02em; margin: 0; }
+.marcas-header p { font-size: 0.85rem; color: rgba(235, 235, 245, 0.6); margin: 2px 0 0; }
+.marcas-close {
+    width: 32px; height: 32px; flex-shrink: 0;
+    border-radius: 50%; border: 0; cursor: pointer;
+    background: rgba(118, 118, 128, 0.32); color: rgba(235, 235, 245, 0.8);
+    font-size: 15px; display: inline-flex; align-items: center; justify-content: center;
+}
+.marcas-body {
+    overflow-y: auto; -webkit-overflow-scrolling: touch; overscroll-behavior: contain;
+    padding: 4px 16px 16px;
+}
+.marcas-list {
+    list-style: none; margin: 0; padding: 0;
+    background: rgba(44, 44, 46, 0.85);
+    border-radius: 16px; overflow: hidden;
+}
+.marcas-list li {
+    display: flex; align-items: center; gap: 14px;
+    padding: 12px 16px; min-height: 60px;
+    position: relative;
+}
+.marcas-list li + li::before {
+    content: ""; position: absolute; top: 0; right: 0; left: 70px;
+    border-top: 0.5px solid rgba(84, 84, 88, 0.65);
+}
+.marcas-icon {
+    width: 42px; height: 42px; flex-shrink: 0; border-radius: 11px;
+    display: inline-flex; align-items: center; justify-content: center;
+    background: linear-gradient(135deg, #FFD700, #EAB308); color: #000;
+    font-weight: 800; font-size: 0.85rem; letter-spacing: -0.02em; overflow: hidden;
+}
+.marcas-icon img { width: 100%; height: 100%; object-fit: cover; background: #fff; }
+.marcas-name { font-weight: 600; font-size: 1rem; line-height: 1.2; }
+.marcas-models { font-size: 0.8rem; color: rgba(235, 235, 245, 0.6); margin-top: 2px; }
+.marcas-check { margin-left: auto; color: #30D158; font-size: 0.95rem; }
+.marcas-note { font-size: 0.78rem; color: rgba(235, 235, 245, 0.55); text-align: center; margin: 14px 8px 4px; }
+.marcas-cta {
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    margin: 12px 16px 16px; padding: 14px 20px;
+    border-radius: 14px; background: #30D158; color: #000 !important;
+    font-weight: 700; font-size: 1rem; text-decoration: none;
+}
+.marcas-cta:active { transform: scale(0.98); }
+
+/* Botón que abre el modal */
+.btn-marcas {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 12px 22px; border-radius: 9999px; border: 0; cursor: pointer;
+    background: rgba(234, 179, 8, 0.15); color: var(--ios-gold);
+    border: 1px solid rgba(234, 179, 8, 0.45);
+    font-weight: 700; font-size: 0.95rem;
+    -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+    transition: background 0.25s var(--ios-ease), transform 0.25s var(--ios-ease);
+}
+.btn-marcas:hover { background: var(--ios-gold); color: #000; }
+
+body.marcas-lock { overflow: hidden; }
+
+/* ---------- Accesibilidad: menos movimiento ---------- */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

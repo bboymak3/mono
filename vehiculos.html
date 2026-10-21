@@ -88,6 +88,7 @@ img.h-full.object-cover{min-height:100%}
         }
     </style>
 
+    <link rel="stylesheet" href="/css/ios-layer.css">
 </head>
 <body class="bg-gray-50 text-gray-900 font-poppins flex flex-col min-h-screen pb-20">
 <nav class="fixed w-full z-50 bg-black text-white shadow-xl border-b border-yellow-500/30">
@@ -131,6 +132,7 @@ img.h-full.object-cover{min-height:100%}
         <h1 class="text-4xl md:text-6xl font-black mb-4 uppercase leading-tight italic">Vehículos</h1>
         <p class="text-lg md:text-xl mb-2 text-yellow-400 font-bold uppercase tracking-wide">Todas las Marcas y Modelos</p>
         <p class="text-base md:text-xl mb-8 text-gray-300 italic font-medium leading-relaxed">Trabajamos con todas las marcas de vehículos. Desde autos compactos hasta SUV premium, cada volante recibe un tratamiento artesanal de primera calidad.</p>
+        <div class="mb-8"><button type="button" class="btn-marcas" data-open-marcas><i class="fas fa-car"></i> Ver marcas que tapizamos</button></div>
         <div class="flex items-center justify-center gap-2 text-yellow-500">
             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
             <span class="text-white text-sm ml-2">5.0 - Google Reviews</span>
@@ -676,4 +678,5 @@ if(location.hash.startsWith("#vehiculo-"))setTimeout(()=>scrollToVehicle(locatio
         </div>
     </footer>
 
+    <script src="/js/marcas-modal.js" defer></script>
 </body></html>
