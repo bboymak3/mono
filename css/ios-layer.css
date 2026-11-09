@@ -116,7 +116,7 @@ input, textarea, select {
 ::-webkit-scrollbar-track { background: transparent; }
 
 /* ==========================================================================
-   Modal "Marcas que tapizamos" (hoja inferior estilo iOS)
+   Modal "Marcas y modelos que tapizamos" (hoja inferior estilo iOS)
    ========================================================================== */
 .marcas-sheet-backdrop {
     position: fixed; inset: 0; z-index: 70;
@@ -174,30 +174,81 @@ input, textarea, select {
     overflow-y: auto; -webkit-overflow-scrolling: touch; overscroll-behavior: contain;
     padding: 4px 16px 16px;
 }
-.marcas-list {
-    list-style: none; margin: 0; padding: 0;
-    background: rgba(44, 44, 46, 0.85);
-    border-radius: 16px; overflow: hidden;
+@media (min-width: 768px) {
+    .marcas-sheet-wide { max-width: 920px; }
 }
-.marcas-list li {
-    display: flex; align-items: center; gap: 14px;
-    padding: 12px 16px; min-height: 60px;
-    position: relative;
+
+/* Carrusel infinito de logos (modelo GlobalPro) */
+.veh-marquee {
+    overflow: hidden; margin: 4px -16px 0; padding: 14px 0;
+    background: #121212;
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
+    mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
 }
-.marcas-list li + li::before {
-    content: ""; position: absolute; top: 0; right: 0; left: 70px;
-    border-top: 0.5px solid rgba(84, 84, 88, 0.65);
+.veh-marquee-track {
+    display: flex; gap: 22px; width: max-content;
+    animation: veh-marquee 32s linear infinite;
 }
-.marcas-icon {
-    width: 42px; height: 42px; flex-shrink: 0; border-radius: 11px;
-    display: inline-flex; align-items: center; justify-content: center;
-    background: linear-gradient(135deg, #FFD700, #EAB308); color: #000;
-    font-weight: 800; font-size: 0.85rem; letter-spacing: -0.02em; overflow: hidden;
+.veh-marquee:hover .veh-marquee-track { animation-play-state: paused; }
+@keyframes veh-marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(calc(-50% - 11px)); }
 }
-.marcas-icon img { width: 100%; height: 100%; object-fit: cover; background: #fff; }
-.marcas-name { font-weight: 600; font-size: 1rem; line-height: 1.2; }
-.marcas-models { font-size: 0.8rem; color: rgba(235, 235, 245, 0.6); margin-top: 2px; }
-.marcas-check { margin-left: auto; color: #30D158; font-size: 0.95rem; }
+.veh-logo {
+    width: 64px; height: 64px; flex-shrink: 0; border-radius: 50%;
+    background: #fff; display: flex; align-items: center; justify-content: center;
+    overflow: hidden; filter: grayscale(100%); opacity: 0.7;
+    transition: filter 0.3s var(--ios-ease), opacity 0.3s var(--ios-ease), transform 0.3s var(--ios-ease);
+}
+.veh-logo:hover { filter: none; opacity: 1; transform: scale(1.08); }
+.veh-logo img { width: 100%; height: 100%; object-fit: contain; }
+.veh-logo span {
+    color: #111; font-weight: 800; font-size: 0.6rem; line-height: 1.1;
+    text-align: center; text-transform: uppercase; letter-spacing: -0.01em; padding: 4px;
+}
+.veh-subtitle {
+    color: var(--ios-gold); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em;
+    text-transform: uppercase; text-align: center; margin: 12px 0 16px;
+}
+
+/* Tarjetas de vehículos */
+.veh-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+@media (min-width: 768px) {
+    .veh-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+}
+.veh-card {
+    display: flex; flex-direction: column; text-decoration: none;
+    background: #fff; color: #111; border-radius: 16px; overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s var(--ios-ease), box-shadow 0.3s var(--ios-ease);
+}
+.veh-card:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(234, 179, 8, 0.3); }
+.veh-card:active { transform: scale(0.97); }
+.veh-media {
+    height: 110px; display: flex; align-items: center; justify-content: center;
+    padding: 10px; background: #fff;
+}
+.veh-media img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.veh-media img.veh-foto { width: 100%; height: 100%; object-fit: cover; border-radius: 10px; }
+.veh-media img.veh-logo-img { width: 74px; height: 74px; }
+.veh-marca-texto {
+    width: 74px; height: 74px; border-radius: 50%; border: 3px solid #111;
+    display: flex; align-items: center; justify-content: center; text-align: center;
+    font-weight: 800; font-size: 0.68rem; text-transform: uppercase; line-height: 1.1; padding: 4px;
+}
+.veh-info { padding: 4px 10px 14px; text-align: center; }
+.veh-brand { color: #B45309; font-weight: 800; font-size: 0.9rem; }
+.veh-model { color: #374151; font-size: 0.92rem; margin-top: 2px; }
+.veh-type { color: #6B7280; font-size: 0.78rem; margin-top: 4px; }
+
+.veh-actions { display: flex; justify-content: center; margin-top: 4px; }
+.veh-btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 12px 20px; border-radius: 14px; font-weight: 700; font-size: 0.95rem;
+    text-decoration: none;
+}
+.veh-btn-dark { background: #2C2C2E; color: #fff !important; border: 2px solid var(--ios-gold); }
+.veh-btn-dark:hover { background: var(--ios-gold); color: #000 !important; }
 .marcas-note { font-size: 0.78rem; color: rgba(235, 235, 245, 0.55); text-align: center; margin: 14px 8px 4px; }
 .marcas-cta {
     display: flex; align-items: center; justify-content: center; gap: 8px;
