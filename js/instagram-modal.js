@@ -4,9 +4,7 @@
    Se abre con cualquier elemento [data-open-instagram] o con el enlace #instagram. */
 (function () {
     var URL_IG = 'https://www.instagram.com/tapizadodevolantesensantiago/';
-    // Perfil de Google del negocio: reemplazar por el enlace exacto de la ficha si se tiene
-    var URL_GOOGLE = 'https://www.google.com/maps/search/?api=1&query=' +
-        encodeURIComponent('Mono Cromático Tapizado de Volantes, Av. Vicuña Mackenna 2362, Ñuñoa');
+    var URL_GOOGLE = 'https://maps.app.goo.gl/rjAGwm62YevVtvf1A';
     var modal = null, ultimoFoco = null;
 
     function crearModal() {

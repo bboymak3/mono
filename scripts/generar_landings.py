@@ -12,6 +12,17 @@ SITE = 'https://tapizadodevolante.com'
 WA = 'https://wa.me/56992537569?text='
 IMG = '/images/wp-content/uploads/2024/10/'
 IG = 'https://www.instagram.com/tapizadodevolantesensantiago/'
+GOOGLE = 'https://maps.app.goo.gl/rjAGwm62YevVtvf1A'
+
+# Reseñas reales del perfil de Google (texto tal como lo escribió cada cliente)
+RESENAS = [
+    ('Will Jimenez', '', '#7C3AED', 'Excelente trabajo, muy limpio y de buena calidad.'),
+    ('Albeiro Morales', '', '#0EA5E9', 'Excelente servio, muy dedicado y detallista, quedó original el volante del auto, lo recomiendo al 100%'),
+    ('carlos guerra', '', '#16A34A', 'Secos secos muy lindo trabajo'),
+    ('Samanta Méndez', 'Local Guide', '#EA580C', 'Me encantó el trabajo! Llevo ya varios veces y se mantiene intacto y la atención 100/100 recomedadisimo!'),
+    ('danniellys alvarado', '', '#0891B2', 'Buena calidad, un año con el tapizado y está intacto 10 de 10'),
+    ('Klear Mendoza', '', '#DB2777', 'La verdad que a sido una buena experiencia súper atento y responsable excelente calidad  lo recomiendo'),
+]
 
 DATA = json.load(open(os.path.join(HERE, 'datos', 'vehiculos.json'), encoding='utf-8'))
 
@@ -219,6 +230,38 @@ def bloque_cubre_volantes(sufijo='', msg='Hola, quiero cotizar un cubre volante'
 '''
 
 
+def bloque_resenas():
+    """Sección con las reseñas de Google, presente en todas las landings."""
+    tarjetas = ''.join(f'''            <figure class="resena-card">
+                <div class="resena-autor">
+                    <span class="resena-avatar" style="background:{color}">{nombre[0].upper()}</span>
+                    <div><figcaption class="resena-nombre">{nombre}</figcaption><div class="resena-meta">{(badge + ' · ') if badge else ''}Reseña de Google</div></div>
+                    <i class="fab fa-google resena-g"></i>
+                </div>
+                <div class="resena-estrellas" aria-label="5 de 5 estrellas">★★★★★</div>
+                <blockquote class="resena-texto">{texto}</blockquote>
+            </figure>
+''' for nombre, badge, color, texto in RESENAS)
+    return f'''
+<!-- RESEÑAS DE GOOGLE -->
+<section class="py-16 bg-white border-t border-gray-200" id="resenas">
+    <div class="container mx-auto px-4 max-w-6xl">
+        <div class="text-center mb-10">
+            <div class="inline-flex items-center gap-2 bg-gray-100 rounded-full px-4 py-2 mb-4"><i class="fab fa-google text-blue-500"></i><span class="font-black">5.0</span><span class="text-yellow-500">★★★★★</span><span class="text-gray-500 text-sm">en Google</span></div>
+            <h2 class="text-2xl md:text-4xl font-black uppercase italic mb-3">Lo que dicen nuestros clientes</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">Opiniones reales de clientes de tapizado de volantes en nuestro perfil de Google.</p>
+        </div>
+        <div class="resenas-grid">
+{tarjetas}        </div>
+        <div class="flex flex-col sm:flex-row justify-center gap-3 mt-10">
+            <a href="{GOOGLE}" target="_blank" rel="noopener" class="bg-black text-white px-8 py-3 rounded font-black uppercase text-center hover:bg-yellow-500 hover:text-black transition"><i class="fab fa-google mr-2"></i>Ver todas las reseñas</a>
+            <a href="{GOOGLE}" target="_blank" rel="noopener" class="border-2 border-black text-black px-8 py-3 rounded font-black uppercase text-center hover:bg-black hover:text-white transition"><i class="fas fa-star mr-2 text-yellow-500"></i>Dejar una reseña</a>
+        </div>
+    </div>
+</section>
+'''
+
+
 # ---------- Landing por vehículo ----------
 def pagina_vehiculo(v):
     n = v['nombre']
@@ -242,7 +285,7 @@ def pagina_vehiculo(v):
          "serviceType": "Tapizado de volantes", "description": desc, "url": url, "image": SITE + v['foto'],
          "areaServed": {"@type": "City", "name": "Santiago"},
          "provider": {"@type": "AutoRepair", "name": "Mono Cromático - Tapizado de Volantes", "telephone": "+56992537569",
-                      "url": SITE + "/", "sameAs": [IG]},
+                      "url": SITE + "/", "sameAs": [IG, GOOGLE]},
          "hasOfferCatalog": {"@type": "OfferCatalog", "name": f"Servicios para {n}", "itemListElement": [
              {"@type": "Offer", "itemOffered": {"@type": "Service", "name": f"Tapizado de volante {n} en cuero"}},
              {"@type": "Offer", "itemOffered": {"@type": "Service", "name": f"Tapizado de volante {n} en alcántara"}},
@@ -337,7 +380,7 @@ def pagina_vehiculo(v):
         <div class="text-center mt-10"><a href="/vehiculos" class="veh-btn veh-btn-dark"><i class="fas fa-car"></i> Ver todos los vehículos ({len(DATA)}) <i class="fas fa-arrow-right"></i></a></div>
     </div>
 </section>
-
+{bloque_resenas()}
 <!-- PREGUNTAS FRECUENTES -->
 <section class="py-16 bg-gray-50">
     <div class="container mx-auto px-4 max-w-3xl">
@@ -380,7 +423,7 @@ def pagina_cubre_volantes():
         {"@context": "https://schema.org", "@type": "Service", "name": "Cubre volantes en Santiago", "serviceType": "Cubre volantes",
          "description": desc, "url": url, "image": SITE + "/images/forrar-volante-de-coche-forrar-volante-de-cuero-en-santiago-monocromatico.jpg",
          "areaServed": {"@type": "City", "name": "Santiago"},
-         "provider": {"@type": "AutoRepair", "name": "Mono Cromático - Tapizado de Volantes", "telephone": "+56992537569", "url": SITE + "/", "sameAs": [IG]}},
+         "provider": {"@type": "AutoRepair", "name": "Mono Cromático - Tapizado de Volantes", "telephone": "+56992537569", "url": SITE + "/", "sameAs": [IG, GOOGLE]}},
         {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Inicio", "item": SITE + "/"},
             {"@type": "ListItem", "position": 2, "name": "Cubre Volantes", "item": url}]},
@@ -474,7 +517,7 @@ def pagina_cubre_volantes():
 {tarjetas}        </div>
     </div>
 </section>
-
+{bloque_resenas()}
 <!-- PREGUNTAS FRECUENTES -->
 <section class="py-16 bg-gray-50">
     <div class="container mx-auto px-4 max-w-3xl">
