@@ -1,0 +1,322 @@
+[
+ {
+  "slug": "chevrolet-sail",
+  "marca": "Chevrolet",
+  "modelo": "Sail",
+  "motor": "1.3L - 1.5L",
+  "anos": "2011 - 2022",
+  "tipo": "Sedan",
+  "img": "/images/wp-content/uploads/2024/10/chevrolet-sail.png",
+  "desc": "Sedan economico con amplio interior y buen equipamiento"
+ },
+ {
+  "slug": "chevrolet-sonic",
+  "marca": "Chevrolet",
+  "modelo": "Sonic",
+  "motor": "1.4L - 1.6L",
+  "anos": "2012 - 2020",
+  "tipo": "Compacto",
+  "img": "/images/wp-content/uploads/2024/10/chevrolet-sonic-300x198.png",
+  "desc": "Compacto dinamico con gran desempeno"
+ },
+ {
+  "slug": "chevrolet-spark",
+  "marca": "Chevrolet",
+  "modelo": "Spark",
+  "motor": "1.0L - 1.2L",
+  "anos": "2010 - 2022",
+  "tipo": "City car",
+  "img": "/images/wp-content/uploads/2024/10/chevrolet-spark-300x225.png",
+  "desc": "City car compacto ideal para movilidad urbana"
+ },
+ {
+  "slug": "fiat-bravo-tjet",
+  "marca": "Fiat",
+  "modelo": "Bravo tjet",
+  "motor": "1.4",
+  "anos": "2010",
+  "tipo": "Hatchback turbo",
+  "img": "/images/wp-content/uploads/2024/08/Fiat-Bravo-2016-300x173.jpg",
+  "desc": "Hatchback turbo con desempeno deportivo"
+ },
+ {
+  "slug": "ford-ecosport",
+  "marca": "Ford",
+  "modelo": "EcoSport",
+  "motor": "1.4L - 2.0L",
+  "anos": "2005 - 2022",
+  "tipo": "SUV compacto",
+  "img": "/images/wp-content/uploads/2024/10/ford-ecosport-300x184.png",
+  "desc": "SUV compacto ideal para ciudad y caminos"
+ },
+ {
+  "slug": "ford-fiesta",
+  "marca": "Ford",
+  "modelo": "Fiesta",
+  "motor": "1.6L",
+  "anos": "2005 - 2019",
+  "tipo": "Compacto",
+  "img": "/images/wp-content/uploads/2024/10/ford-fiesta-300x199.png",
+  "desc": "Clasico urbano con manejo agil"
+ },
+ {
+  "slug": "honda-city",
+  "marca": "Honda",
+  "modelo": "City",
+  "motor": "1.5L",
+  "anos": "2009 - 2022",
+  "tipo": "Sedan",
+  "img": "/images/wp-content/uploads/2024/10/honda-city-300x225.png",
+  "desc": "Sedan de alta eficiencia y confiabilidad"
+ },
+ {
+  "slug": "honda-civic",
+  "marca": "Honda",
+  "modelo": "Civic",
+  "motor": "1.6L - 2.0L",
+  "anos": "2005 - 2022",
+  "tipo": "Sedan deportivo",
+  "img": "/images/wp-content/uploads/2024/10/honda-civic-300x300.png",
+  "desc": "Sedan deportivo de alto rendimiento"
+ },
+ {
+  "slug": "honda-cr-v",
+  "marca": "Honda",
+  "modelo": "CR-V",
+  "motor": "2.0L - 2.4L",
+  "anos": "2005 - 2022",
+  "tipo": "SUV",
+  "img": "/images/wp-content/uploads/2024/10/honda-crv-300x225.png",
+  "desc": "SUV familiar con amplio espacio y comodidad"
+ },
+ {
+  "slug": "hyundai-accent",
+  "marca": "Hyundai",
+  "modelo": "Accent",
+  "motor": "1.4L - 1.6L",
+  "anos": "2005 - 2022",
+  "tipo": "Sedan",
+  "img": "/images/wp-content/uploads/2024/10/hyundai-accent-300x199.png",
+  "desc": "Sedan economico y confiable para el dia a dia"
+ },
+ {
+  "slug": "hyundai-grand-i10",
+  "marca": "Hyundai",
+  "modelo": "Grand i10",
+  "motor": "1.0L - 1.2L",
+  "anos": "2013 - 2022",
+  "tipo": "City car",
+  "img": "/images/wp-content/uploads/2024/10/hyundai-grandi10-300x137.png",
+  "desc": "City car moderno con excelente rendimiento"
+ },
+ {
+  "slug": "hyundai-tucson",
+  "marca": "Hyundai",
+  "modelo": "Tucson",
+  "motor": "1.6L - 2.0L",
+  "anos": "2005 - 2022",
+  "tipo": "SUV",
+  "img": "/images/wp-content/uploads/2024/10/hyundai-tucson-300x184.png",
+  "desc": "SUV de tamano medio con tecnologia avanzada"
+ },
+ {
+  "slug": "kia-morning",
+  "marca": "Kia",
+  "modelo": "Morning",
+  "motor": "1.0L - 1.2L",
+  "anos": "2008 - 2022",
+  "tipo": "City car",
+  "img": "/images/wp-content/uploads/2024/10/33678-MORNING-300x225.jpg",
+  "desc": "City car pequeno y economico para la ciudad"
+ },
+ {
+  "slug": "kia-rio",
+  "marca": "Kia",
+  "modelo": "Rio",
+  "motor": "1.2L - 1.4L",
+  "anos": "2005 - 2022",
+  "tipo": "Sedan",
+  "img": "/images/wp-content/uploads/2024/10/kia-rio-300x180.png",
+  "desc": "Sedan economico con garantia de larga duracion"
+ },
+ {
+  "slug": "mazda-3",
+  "marca": "Mazda",
+  "modelo": "3",
+  "motor": "1.6L - 2.5L",
+  "anos": "2005 - 2022",
+  "tipo": "Sedan/Hatchback",
+  "img": "/images/wp-content/uploads/2024/10/mazda-3-300x158.png",
+  "desc": "Sedan y hatchback con diseno japones premium"
+ },
+ {
+  "slug": "mazda-cx-5",
+  "marca": "Mazda",
+  "modelo": "CX-5",
+  "motor": "2.0L - 2.5L",
+  "anos": "2012 - 2022",
+  "tipo": "SUV premium",
+  "img": "/images/wp-content/uploads/2024/10/mazda-cx-5-300x199.png",
+  "desc": "SUV premium con diseno Kodo y tecnologia Skyactiv"
+ },
+ {
+  "slug": "mg-3",
+  "marca": "MG",
+  "modelo": "3",
+  "motor": "1.5L",
+  "anos": "2014 - 2022",
+  "tipo": "Compacto",
+  "img": "/images/wp-content/uploads/2024/10/mg-3-300x216.png",
+  "desc": "Compacto con excelente relacion calidad-precio"
+ },
+ {
+  "slug": "mg-zs",
+  "marca": "MG",
+  "modelo": "ZS",
+  "motor": "1.5L",
+  "anos": "2017 - 2022",
+  "tipo": "SUV compacto",
+  "img": "/images/wp-content/uploads/2024/10/mg-zs-300x106.png",
+  "desc": "SUV compacto con tecnologia moderna"
+ },
+ {
+  "slug": "nissan-kicks",
+  "marca": "Nissan",
+  "modelo": "Kicks",
+  "motor": "1.5L - 1.6L",
+  "anos": "2016 - 2022",
+  "tipo": "SUV compacto",
+  "img": "/images/wp-content/uploads/2024/10/nissan-kicks-300x147.png",
+  "desc": "SUV compacto con diseno juventivo y moderno"
+ },
+ {
+  "slug": "nissan-versa",
+  "marca": "Nissan",
+  "modelo": "Versa",
+  "motor": "1.6L - 1.8L",
+  "anos": "2012 - 2022",
+  "tipo": "Sedan",
+  "img": "/images/wp-content/uploads/2024/10/nissan-versa-300x200.png",
+  "desc": "Sedan accesible con amplio espacio interior"
+ },
+ {
+  "slug": "peugeot-208",
+  "marca": "Peugeot",
+  "modelo": "208",
+  "motor": "1.2L - 1.6L",
+  "anos": "2013 - 2022",
+  "tipo": "Compacto",
+  "img": "/images/wp-content/uploads/2024/10/peugeot-208-300x197.png",
+  "desc": "Compacto frances con estilo y agilidad urbana"
+ },
+ {
+  "slug": "peugeot-3008",
+  "marca": "Peugeot",
+  "modelo": "3008",
+  "motor": "1.5L - 2.0L",
+  "anos": "2009 - 2022",
+  "tipo": "SUV premium",
+  "img": "/images/wp-content/uploads/2024/10/peugeot-3008-300x199.png",
+  "desc": "SUV premium frances con diseno innovador"
+ },
+ {
+  "slug": "renault-duster",
+  "marca": "Renault",
+  "modelo": "Duster",
+  "motor": "1.6L - 2.0L",
+  "anos": "2012 - 2022",
+  "tipo": "SUV",
+  "img": "/images/wp-content/uploads/2024/10/renault-duster-300x158.png",
+  "desc": "SUV robusto para aventuras urbanas y off-road"
+ },
+ {
+  "slug": "renault-logan",
+  "marca": "Renault",
+  "modelo": "Logan",
+  "motor": "1.0L - 1.6L",
+  "anos": "2005 - 2022",
+  "tipo": "Sedan compacto",
+  "img": "/images/wp-content/uploads/2024/10/Renault-logan-300x225.png",
+  "desc": "Sedan compacto eficiente y confiable"
+ },
+ {
+  "slug": "subaru-forester",
+  "marca": "Subaru",
+  "modelo": "Forester",
+  "motor": "2.0L - 2.5L",
+  "anos": "2005 - 2022",
+  "tipo": "SUV",
+  "img": "/images/wp-content/uploads/2024/10/subaru-forester-300x172.png",
+  "desc": "SUV premium con traccion integral Symmetrical AWD"
+ },
+ {
+  "slug": "subaru-xv",
+  "marca": "Subaru",
+  "modelo": "XV",
+  "motor": "1.6L - 2.0L",
+  "anos": "2012 - 2022",
+  "tipo": "Crossover",
+  "img": "/images/wp-content/uploads/2024/10/subaru-xv-300x225.png",
+  "desc": "Crossover versatil con traccion permanente"
+ },
+ {
+  "slug": "suzuki-baleno",
+  "marca": "Suzuki",
+  "modelo": "Baleno",
+  "motor": "1.4L",
+  "anos": "2016 - 2022",
+  "tipo": "Hatchback",
+  "img": "/images/wp-content/uploads/2024/10/suzuki-baleno-300x196.png",
+  "desc": "Hatchback ligero y eficiente para la ciudad"
+ },
+ {
+  "slug": "suzuki-celerio",
+  "marca": "Suzuki",
+  "modelo": "Celerio",
+  "motor": "1.0L - 1.2L",
+  "anos": "2008 - 2022",
+  "tipo": "City car",
+  "img": "/images/wp-content/uploads/2024/10/suzuki-celerio-300x225.png",
+  "desc": "Economico y practico para la ciudad"
+ },
+ {
+  "slug": "suzuki-swift",
+  "marca": "Suzuki",
+  "modelo": "Swift",
+  "motor": "1.2L - 1.4L",
+  "anos": "2005 - 2022",
+  "tipo": "Hatchback",
+  "img": "/images/wp-content/uploads/2024/08/pngegg-1-300x200.png",
+  "desc": "Hatchback agil y deportivo de alta eficiencia"
+ },
+ {
+  "slug": "toyota-corolla",
+  "marca": "Toyota",
+  "modelo": "Corolla",
+  "motor": "1.6L - 2.0L",
+  "anos": "2005 - 2022",
+  "tipo": "Sedan",
+  "img": "/images/wp-content/uploads/2024/10/toyota-corolla-300x225.png",
+  "desc": "El sedan mas vendido del mundo, confiable y durable"
+ },
+ {
+  "slug": "toyota-yaris",
+  "marca": "Toyota",
+  "modelo": "Yaris",
+  "motor": "1.3L - 1.5L",
+  "anos": "2005 - 2022",
+  "tipo": "Compacto/Hatchback",
+  "img": "/images/wp-content/uploads/2024/10/toyota-yaris-300x200.png",
+  "desc": "Compacto eficiente con excelente rendimiento de combustible"
+ },
+ {
+  "slug": "volkswagen-gol",
+  "marca": "Volkswagen",
+  "modelo": "Gol",
+  "motor": "1.6L",
+  "anos": "2005 - 2022",
+  "tipo": "Compacto",
+  "img": "/images/wp-content/uploads/2024/10/volkswagen-gol-300x177.png",
+  "desc": "Compacto economico de alta durabilidad"
+ }
+]

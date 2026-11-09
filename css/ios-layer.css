@@ -178,7 +178,7 @@ input, textarea, select {
     .marcas-sheet-wide { max-width: 920px; }
 }
 
-/* Carrusel infinito de logos (modelo GlobalPro) */
+/* Carrusel infinito de logos de marcas */
 .veh-marquee {
     overflow: hidden; margin: 4px -16px 0; padding: 14px 0;
     background: #121212;
@@ -281,3 +281,67 @@ body.marcas-lock { overflow: hidden; }
         scroll-behavior: auto !important;
     }
 }
+
+/* Menú de escritorio: con 8 enlaces se aprieta entre 1024 y 1280px */
+@media (min-width: 1024px) and (max-width: 1279px) {
+    nav.fixed .lg\:flex.gap-6 { gap: 0.9rem; }
+    nav.fixed .lg\:flex.gap-6 > a.text-sm { font-size: 0.75rem; }
+    nav.fixed .lg\:flex.gap-6 > a.nav-btn { padding-left: 1rem; padding-right: 1rem; }
+}
+
+/* ---------- Modal de Instagram ---------- */
+.ig-perfil { display: flex; align-items: center; gap: 14px; padding: 8px 4px 16px; }
+.ig-avatar {
+    width: 64px; height: 64px; border-radius: 50%; padding: 3px; flex-shrink: 0;
+    background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AF, #515BD4);
+}
+.ig-avatar img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; border: 2px solid #1C1C1E; }
+.ig-usuario { font-weight: 700; font-size: 1rem; }
+.ig-nombre { font-size: 0.82rem; color: rgba(235, 235, 245, 0.6); margin-top: 2px; }
+.ig-lista { list-style: none; margin: 0; padding: 0; background: rgba(44, 44, 46, 0.85); border-radius: 16px; }
+.ig-lista li { display: flex; align-items: center; gap: 12px; padding: 14px 16px; font-size: 0.92rem; }
+.ig-lista li + li { border-top: 0.5px solid rgba(84, 84, 88, 0.65); }
+.ig-lista i { color: #DD2A7B; width: 18px; text-align: center; }
+.ig-cta { background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AF) !important; color: #fff !important; }
+.btn-instagram {
+    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    padding: 14px 28px; border-radius: 9999px; border: 0; cursor: pointer;
+    background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AF); color: #fff !important;
+    font-weight: 800; font-size: 1rem; text-decoration: none;
+    box-shadow: 0 8px 24px rgba(221, 42, 123, 0.35);
+    transition: transform 0.25s var(--ios-ease);
+}
+.btn-instagram:hover { transform: scale(1.04); }
+.ig-botones { display: flex; flex-direction: column; gap: 0; }
+.ig-botones .marcas-cta + .marcas-cta { margin-top: 0; }
+.google-cta { background: #fff !important; color: #1f1f1f !important; }
+.google-cta .fa-google { color: #4285F4; }
+.google-cta .fa-star { color: #FBBC05; }
+
+/* Botones redondos flotantes: Instagram (abre el modal) y perfil de Google */
+.social-flotantes {
+    position: fixed; right: 14px; bottom: calc(24px + var(--safe-bottom)); z-index: 55;
+    display: flex; flex-direction: column; gap: 12px;
+}
+/* En páginas con la barra fija de contacto, se ubican por encima de ella */
+body:has(> .fixed.bottom-0) .social-flotantes { bottom: calc(120px + var(--safe-bottom)); }
+.social-circulo {
+    width: 54px; height: 54px; border-radius: 50%; border: 0; cursor: pointer;
+    display: inline-flex; align-items: center; justify-content: center;
+    font-size: 26px; text-decoration: none;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+    transition: transform 0.25s var(--ios-ease);
+}
+.social-circulo:hover { transform: scale(1.1); }
+.social-ig { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%); color: #fff; }
+.social-google { background: #fff; color: #4285F4; border: 2px solid #e5e7eb; }
+/* Fuera del modal el carrusel ocupa el ancho de su sección, sin margen negativo */
+section > .veh-marquee { margin: 0; }
+
+/* Barra de contacto: en teléfonos angostos los botones no caben con su relleno original */
+@media (max-width: 480px) {
+    body > .fixed.bottom-0 a, body > .fixed.bottom-0 > div > div {
+        padding-left: 0.75rem !important; padding-right: 0.75rem !important; font-size: 0.95rem !important;
+    }
+}
+.ig-usuario { word-break: break-all; }
