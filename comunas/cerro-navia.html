@@ -503,8 +503,8 @@ const COMUNA_COLOR = "#A855F7";
       scrollWheelZoom: false,
       zoomControl: true
     });
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png', {
-      attribution: '© OpenStreetMap, © CARTO',
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
       maxZoom: 18
     }).addTo(map);
     // Marcador principal (comuna actual)

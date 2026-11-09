@@ -372,3 +372,6 @@ section > .veh-marquee { margin: 0; }
 .resena-g { margin-left: auto; color: #4285F4; font-size: 1.1rem; }
 .resena-estrellas { color: #FBBC05; letter-spacing: 2px; margin: 12px 0 6px; font-size: 1.05rem; }
 .resena-texto { margin: 0; color: #374151; line-height: 1.6; font-size: 0.95rem; }
+
+/* Mapas Leaflet: teselas de OpenStreetMap (sin API key) oscurecidas para el diseño negro/dorado */
+.leaflet-tile-pane { filter: invert(1) hue-rotate(180deg) brightness(0.85) contrast(0.9) saturate(0.6); }
