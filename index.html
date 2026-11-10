@@ -1158,7 +1158,7 @@
             );
 
             marker.on('click', function() {
-                window.location.href = '/comunas/' + c.slug + '.html';
+                window.location.href = '/comunas/' + c.slug;
             });
 
             marker.on('mouseover', function() {
@@ -1180,7 +1180,7 @@
     function seleccionarComuna(slug, nombre) {
         if (comunaSeleccionada === slug) {
             // Segundo click: abrir landing
-            window.location.href = '/comunas/' + slug + '.html';
+            window.location.href = '/comunas/' + slug;
             return;
         }
 

@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://tapizadodevolante.com/galeria.html</loc>
+    <loc>https://tapizadodevolante.com/galeria</loc>
     <image:image>
       <image:loc>https://tapizadodevolante.com/images/forrar-un-volante-con-cuero-forrar-volante-coche-en-santiago-monocromatico.jpg</image:loc>
       <image:caption>forrar un volante con cuero forrar volante coche en santiago monocromatico</image:caption>
@@ -180,7 +180,7 @@
     </image:image>
   </url>
   <url>
-    <loc>https://tapizadodevolante.com/vehiculos.html</loc>
+    <loc>https://tapizadodevolante.com/vehiculos</loc>
     <image:image>
       <image:loc>https://tapizadodevolante.com/images/wp-content/uploads/2024/09/182b648c-call-to-action_.jpg</image:loc>
       <image:caption>182b648c call to action</image:caption>
