@@ -1,7 +1,7 @@
 """Genera las landings de vehículos (vehiculos/<slug>.html) y la de cubre volantes
 para tapizadodevolante.com, usando el menú, footer y estilos de las páginas de comuna.
 
-Uso: python3 scripts/generar_landings.py
+Uso: python3 scripts/generar_landings.py  (al final ejecuta scripts/optimizar_imagenes.py)
 Los datos de cada vehículo están en scripts/datos/vehiculos.json."""
 import json, os, re, sys
 from urllib.parse import quote
@@ -546,4 +546,8 @@ if __name__ == '__main__':
     for v in DATA:
         open(os.path.join(ROOT, 'vehiculos', v['slug'] + '.html'), 'w', encoding='utf-8').write(pagina_vehiculo(v))
     open(os.path.join(ROOT, 'cubre-volantes.html'), 'w', encoding='utf-8').write(pagina_cubre_volantes())
+    # WebP, width/height y carga diferida en las páginas recién generadas
+    sys.path.insert(0, HERE)
+    import optimizar_imagenes
+    optimizar_imagenes.main()
     print('ok', len(DATA))

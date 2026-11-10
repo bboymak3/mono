@@ -29,7 +29,7 @@
 
     // Tarjetas: foto completa de cada vehículo y enlace a su landing (/vehiculos/<slug>)
     var VEHICULOS = [
-        { slug: 'chevrolet-sail', marca: 'Chevrolet', modelo: 'Sail', motor: '1.3L - 1.5L', anos: '2011 - 2022', img: '/images/wp-content/uploads/2024/10/chevrolet-sail.png' },
+        { slug: 'chevrolet-sail', marca: 'Chevrolet', modelo: 'Sail', motor: '1.3L - 1.5L', anos: '2011 - 2022', img: '/images/wp-content/uploads/2024/10/chevrolet-sail.webp' },
         { slug: 'chevrolet-sonic', marca: 'Chevrolet', modelo: 'Sonic', motor: '1.4L - 1.6L', anos: '2012 - 2020', img: '/images/wp-content/uploads/2024/10/chevrolet-sonic-300x198.png' },
         { slug: 'chevrolet-spark', marca: 'Chevrolet', modelo: 'Spark', motor: '1.0L - 1.2L', anos: '2010 - 2022', img: '/images/wp-content/uploads/2024/10/chevrolet-spark-300x225.png' },
         { slug: 'fiat-bravo-tjet', marca: 'Fiat', modelo: 'Bravo T-Jet', motor: '1.4L T-Jet', anos: '2010', img: '/images/wp-content/uploads/2024/08/Fiat-Bravo-2016-300x173.jpg' },

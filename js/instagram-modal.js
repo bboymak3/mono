@@ -21,7 +21,7 @@
                 '</div><button type="button" class="marcas-close" aria-label="Cerrar"><i class="fas fa-times"></i></button></div>' +
                 '<div class="marcas-body">' +
                     '<div class="ig-perfil">' +
-                        '<div class="ig-avatar"><img src="/images/monarca/volante-m-sport-tapizado-alcantara-en-santiago-servicio-a-domicilio-puente-alto.jpeg" alt="Mono Cromático en Instagram"></div>' +
+                        '<div class="ig-avatar"><img src="/images/monarca/volante-m-sport-tapizado-alcantara-en-santiago-servicio-a-domicilio-puente-alto.webp" alt="Mono Cromático en Instagram"></div>' +
                         '<div><div class="ig-usuario">@tapizadodevolantesensantiago</div>' +
                         '<div class="ig-nombre">Mono Cromático · Tapizado de Volantes</div></div>' +
                     '</div>' +
