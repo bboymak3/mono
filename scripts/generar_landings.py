@@ -261,6 +261,35 @@ def bloque_resenas():
 '''
 
 
+# Recomendación según el tipo de vehículo, para que cada ficha tenga contenido propio
+CONSEJOS_TIPO = [
+    (('suv', 'crossover'), 'En un {t} el volante es más grueso y se usa con firmeza en ciudad y carretera. Recomendamos cuero o alcántara con costura reforzada; la alcántara da un agarre deportivo y el cuero resiste mejor el sol del parabrisas amplio.'),
+    (('city car',), 'En un city car como el {n} el volante es más delgado y liviano. El ecocuero es la opción más económica y el cuero con costura de color le da un aire más moderno sin cambiar el tamaño del volante.'),
+    (('hatchback', 'compacto'), 'Un {t} como el {n} se maneja mucho en ciudad, con giros y maniobras constantes. El cuero perforado o la alcántara mejoran el agarre; el cubre volante es una alternativa rápida si buscas proteger el volante original.'),
+    (('sedán', 'sedan'), 'En un {t} como el {n} el volante pasa muchas horas en la mano. El cuero liso con costura del color original mantiene la terminación de fábrica, y la alcántara le da un toque deportivo.'),
+]
+
+
+def bloque_consejos(v):
+    tipo = v['tipo'].lower()
+    texto = next((c for claves, c in CONSEJOS_TIPO if any(k in tipo for k in claves)), CONSEJOS_TIPO[-1][1])
+    tipo_txt = v['tipo'] if 'SUV' in v['tipo'] else v['tipo'].lower()
+    texto = texto.format(t=tipo_txt, n=v['nombre'])
+    misma = [o for o in DATA if o['marca'] == v['marca'] and o['slug'] != v['slug']]
+    otros = (' También tapizamos otros modelos de ' + v['marca'] + ': ' +
+             ', '.join(f'<a href="/vehiculos/{o["slug"]}" class="text-yellow-600 font-bold hover:underline">{esc(o["nombre"])}</a>' for o in misma) + '.') if misma else ''
+    return f'''
+<!-- RECOMENDACIONES PARA ESTE VEHÍCULO -->
+<section class="py-14 bg-white border-t border-gray-200">
+    <div class="container mx-auto px-4 max-w-4xl">
+        <h2 class="text-2xl md:text-3xl font-black uppercase italic mb-6 text-center">Qué material elegir para el volante del {esc(v['nombre'])}</h2>
+        <p class="text-gray-700 leading-relaxed mb-4">{texto}</p>
+        <p class="text-gray-700 leading-relaxed">El {esc(v['nombre'])} ({tipo_txt}, motor {v['motor']}, años {v['anos']}) tiene distintas versiones de volante según el año. Antes de tapizar revisamos si el tuyo tiene controles multifunción o airbag, para que el forrado no afecte su funcionamiento.{otros}</p>
+    </div>
+</section>
+'''
+
+
 # ---------- Landing por vehículo ----------
 def pagina_vehiculo(v):
     n = v['nombre']
@@ -361,7 +390,7 @@ def pagina_vehiculo(v):
         </div>
     </div>
 </section>
-
+{bloque_consejos(v)}
 <!-- SERVICIOS PARA ESTE VEHÍCULO -->
 <section class="py-16 bg-gray-50 border-t border-gray-200">
     <div class="container mx-auto px-4">
