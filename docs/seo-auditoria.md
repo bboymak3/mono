@@ -17,7 +17,7 @@ sitemap con 93 URLs, imágenes con texto alternativo.
 | 6 | Importante | Tailwind cargado desde CDN en las 93 páginas (genera CSS en el navegador) | Corregido: `css/tailwind.css` (26 KB). Recompilar con el comando de `tailwind.config.js` al agregar clases nuevas |
 | 7 | Importante | Imágenes pesadas (33 sobre 300 KB, ninguna WebP) y sin `width`/`height` | Corregido: 90 imágenes a WebP (26,1 MB → 13,7 MB), `width`/`height` y carga diferida. `scripts/optimizar_imagenes.py` |
 | 8 | Importante | Tarjetas de vehículos de la portada y `/vehiculos` usan `onclick` en vez de enlaces rastreables | Corregido |
-| 9 | Importante | 47 títulos sobre 65 caracteres y 88 descripciones sobre 160 | Pendiente |
+| 9 | Importante | 47 títulos sobre 65 caracteres y 88 descripciones sobre 160 | Corregido (máx. 62 y 159) |
 | 10 | Importante | Contenido casi idéntico: comunas 96 % iguales entre sí, fichas de vehículos 93 % | Pendiente |
 | 11 | Menor | Sitemap de imágenes con solo 2 páginas | Pendiente |
 | 12 | Menor | Sin etiquetas `twitter:card`, idioma `es` en vez de `es-CL`, línea `Host:` obsoleta en robots.txt | Pendiente |

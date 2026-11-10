@@ -265,9 +265,11 @@ def bloque_resenas():
 def pagina_vehiculo(v):
     n = v['nombre']
     url = f"{SITE}/vehiculos/{v['slug']}"
-    title = f"Tapizado de Volante {n} en Santiago | Cubre Volantes | Mono Cromático"
-    desc = (f"Tapizado de volante {n} a domicilio en Santiago: cuero, alcántara y ecocuero cosido a mano. "
-            f"También cubre volantes para {n}. Cotiza por WhatsApp +56992537569.")
+    # Títulos de hasta ~62 caracteres y descripciones de hasta 160 para que Google no los corte
+    title = next(t for t in (f"Tapizado de Volante {n} en Santiago | Mono Cromático",
+                             f"Tapizado de Volante {n} | Mono Cromático") if len(t) <= 62)
+    desc = (f"Tapizado de volante {n} a domicilio en Santiago: cuero, alcántara o ecocuero cosido a mano. "
+            f"También cubre volantes. Cotiza al +56992537569.")
     kw = ', '.join([f'tapizado de volante {n.lower()}', f'tapizar volante {n.lower()}', f'forrar volante {n.lower()}',
                     f'cubre volante {n.lower()}', f'cubre volantes {n.lower()}', f'volante {n.lower()} cuero',
                     f'volante {n.lower()} alcantara', 'tapizado de volantes santiago', 'cubre volantes santiago'])
@@ -407,9 +409,9 @@ def pagina_vehiculo(v):
 # ---------- Landing de cubre volantes ----------
 def pagina_cubre_volantes():
     url = SITE + '/cubre-volantes'
-    title = 'Cubre Volantes en Santiago | Fundas para Volante a Domicilio | Mono Cromático'
-    desc = ('Cubre volantes en Santiago: fundas para volante en cuero sintético, microfibra y diseños deportivos, '
-            'instaladas a domicilio. También tapizado de volantes. Cotiza al +56992537569.')
+    title = 'Cubre Volantes en Santiago a Domicilio | Mono Cromático'
+    desc = ('Cubre volantes en Santiago: fundas de cuero sintético, microfibra y deportivas, instaladas a domicilio. '
+            'También tapizado de volantes. Cotiza al +56992537569.')
     kw = ('cubre volantes, cubre volante, cubrevolantes, cubre volante auto, cubre volante cuero, funda volante, '
           'funda para volante, forro volante, cubre volantes santiago, cubre volante deportivo, tapizado de volantes')
     faqs = [
