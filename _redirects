@@ -2,5 +2,4 @@
 https://monocromatico.pages.dev/* https://tapizadodevolante.com/:splat 301
 https://tapizadodevolantes.pages.dev/* https://tapizadodevolante.com/:splat 301
 
-# Asegurar que siempre cargue el index.html
-/* /index.html  200
+# Las URLs inexistentes responden con 404.html (código 404), no con la portada

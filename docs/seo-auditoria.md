@@ -10,7 +10,7 @@ sitemap con 93 URLs, imágenes con texto alternativo.
 | # | Prioridad | Problema | Estado |
 |---|-----------|----------|--------|
 | 1 | Grave | Canonical de `/vehiculos` y menú de 5 páginas apuntan a `/vehículos` (con tilde), que no existe | Corregido |
-| 2 | Grave | `_redirects` con `/* /index.html 200`: toda URL inexistente muestra la portada con código 200 (soft 404) | Pendiente |
+| 2 | Grave | `_redirects` con `/* /index.html 200`: toda URL inexistente muestra la portada con código 200 (soft 404) | Corregido |
 | 3 | Grave | URLs mezcladas con y sin `.html` en canonical, sitemap, og:url, JSON-LD y enlaces de los mapas | Pendiente |
 | 4 | Importante | Bloques de palabras clave en letra de 10 px casi invisible (7 páginas) y meta keywords de 2.253 caracteres | Pendiente |
 | 5 | Importante | Datos del negocio inconsistentes: horario (Lun-Sáb vs 24 h en Google), un teléfono distinto, "Vicuna" sin ñ | Pendiente |
