@@ -14,7 +14,7 @@ sitemap con 93 URLs, imágenes con texto alternativo.
 | 3 | Grave | URLs mezcladas con y sin `.html` en canonical, sitemap, og:url, JSON-LD y enlaces de los mapas | Corregido |
 | 4 | Importante | Bloques de palabras clave en letra de 10 px casi invisible (7 páginas) y meta keywords de 2.253 caracteres | Corregido |
 | 5 | Importante | Datos del negocio inconsistentes: horario (Lun-Sáb vs 24 h en Google), un teléfono distinto, "Vicuna" sin ñ | Corregido (24 h, como Google) |
-| 6 | Importante | Tailwind cargado desde CDN en las 93 páginas (genera CSS en el navegador) | Pendiente |
+| 6 | Importante | Tailwind cargado desde CDN en las 93 páginas (genera CSS en el navegador) | Corregido: `css/tailwind.css` (26 KB). Recompilar con el comando de `tailwind.config.js` al agregar clases nuevas |
 | 7 | Importante | Imágenes pesadas (33 sobre 300 KB, ninguna WebP) y sin `width`/`height` | Pendiente |
 | 8 | Importante | Tarjetas de vehículos de la portada y `/vehiculos` usan `onclick` en vez de enlaces rastreables | Pendiente |
 | 9 | Importante | 47 títulos sobre 65 caracteres y 88 descripciones sobre 160 | Pendiente |
