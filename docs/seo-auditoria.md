@@ -19,7 +19,7 @@ sitemap con 93 URLs, imágenes con texto alternativo.
 | 8 | Importante | Tarjetas de vehículos de la portada y `/vehiculos` usan `onclick` en vez de enlaces rastreables | Corregido |
 | 9 | Importante | 47 títulos sobre 65 caracteres y 88 descripciones sobre 160 | Corregido (máx. 62 y 159) |
 | 10 | Importante | Contenido casi idéntico: comunas 96 % iguales entre sí, fichas de vehículos 93 % | Mejorado en parte: datos propios por comuna (distancia, zona, sectores, comunas vecinas enlazadas) y recomendaciones por tipo de vehículo. Falta contenido real del dueño: fotos y trabajos por comuna y por modelo |
-| 11 | Menor | Sitemap de imágenes con solo 2 páginas | Pendiente |
+| 11 | Menor | Sitemap de imágenes con solo 2 páginas | Corregido: 92 páginas, 1.859 imágenes. `scripts/generar_sitemap_imagenes.py` |
 | 12 | Menor | Sin etiquetas `twitter:card`, idioma `es` en vez de `es-CL`, línea `Host:` obsoleta en robots.txt | Pendiente |
 | 13 | Menor | Sin herramienta de estadísticas (Google Analytics) | Requiere el ID de medición del dueño |
 | 14 | Menor | Estrellas de reseñas auto-declaradas: Google no las muestra para negocios locales | Informativo, sin cambio |
