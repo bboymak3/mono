@@ -99,4 +99,3 @@ Disallow: /cdn-cgi/
 # Sitemaps
 Sitemap: https://tapizadodevolante.com/sitemap.xml
 Sitemap: https://tapizadodevolante.com/image-sitemap.xml
-Host: https://tapizadodevolante.com

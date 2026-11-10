@@ -96,7 +96,7 @@ assert '/cubre-volantes' in NAV and 'makeseo.app' in FOOTER_CREDITO
 def head(title, desc, keywords, canonical, og_image, jsonld, extra_style=''):
     ld = '\n'.join('<script type="application/ld+json">\n' + json.dumps(j, ensure_ascii=False) + '\n</script>' for j in jsonld)
     return f'''<!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
+<html lang="es-CL" class="scroll-smooth">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -109,6 +109,7 @@ def head(title, desc, keywords, canonical, og_image, jsonld, extra_style=''):
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(desc)}">
 <meta property="og:image" content="{SITE}{og_image}">
+<meta name="twitter:card" content="summary_large_image">
 <meta property="og:url" content="{canonical}">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_CL">
