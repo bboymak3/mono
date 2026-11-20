@@ -56,6 +56,11 @@ nav.fixed {
     padding-top: var(--safe-top);
 }
 nav.fixed .mobile-menu { background: transparent !important; }
+/* La barra superior (y su menú desplegable) va sobre la barra de contacto (z 50) y los
+   botones flotantes (z 55), pero bajo el visor de fotos (z 60) y los modales (z 70) */
+nav.fixed { z-index: 58 !important; }
+/* Con el menú abierto el fondo es casi opaco para que no se vea lo que hay detrás */
+nav.fixed:has(.mobile-menu.open) { background-color: rgba(10, 10, 10, 0.97) !important; }
 
 /* ---------- Botones y controles ---------- */
 a, button, [role="button"] {
