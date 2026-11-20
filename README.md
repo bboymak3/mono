@@ -10,17 +10,16 @@ Cloudflare Pages desde la rama `main`.
 
 | Ruta | Contenido |
 |------|-----------|
-| `index.html` | Portada: hero, GPS y seguridad vehicular, Instagram, reseñas de Google, vehículos, comunas y mapa |
+| `index.html` | Portada: hero, galería de trabajos, Instagram, reseñas de Google, vehículos, comunas y mapa |
 | `servicios.html`, `vehiculos.html`, `comunas.html`, `galeria.html`, `faq.html`, `contacto.html`, `quienes-somos.html` | Páginas principales |
 | `cubre-volantes.html` | Landing del servicio de cubre volantes |
 | `vehiculos/<modelo>.html` | 32 fichas de vehículos (generadas) |
 | `comunas/<comuna>.html` | 52 landings de comunas de la Región Metropolitana |
 | `404.html` | Página de error (Cloudflare Pages la sirve con código 404) |
 | `css/tailwind.css` | Tailwind compilado (no editar a mano) |
-| `css/ios-layer.css` | Capa visual estilo iOS y estilos de modales, reseñas, GPS, botones flotantes |
+| `css/ios-layer.css` | Capa visual estilo iOS y estilos de modales, reseñas y botones flotantes |
 | `js/marcas-modal.js` | Modal "Marcas y Modelos" con carrusel de logos y tarjetas de vehículos |
 | `js/instagram-modal.js` | Modal de Instagram y perfil de Google + botones flotantes (Tienda, Instagram, Google) |
-| `js/gps-modal.js` | Modal de instalación de GPS y seguridad vehicular |
 | `images/marcas/` | Logos SVG de marcas |
 | `scripts/` | Generadores y optimizadores (ver abajo) |
 | `sitemap.xml`, `image-sitemap.xml`, `robots.txt`, `_redirects` | SEO y redirecciones |
@@ -52,7 +51,9 @@ Datos fijos que conviene tener a mano:
 
 ### 20 de noviembre de 2026
 
-- Botón flotante "Tienda" en todas las páginas hacia `https://tienda.optimuscars.cl`.
+- Botón flotante "Tienda" hacia `https://tienda.optimuscars.cl`, a la izquierda, encima del botón Llamar.
+- Barra superior arreglada: el logo se deformaba; ahora usa una versión de 192 px (10 KB en vez de 168 KB).
+- La galería de trabajos sube al segundo lugar de la portada; se eliminó la sección y el modal de GPS.
 
 ### 10 de noviembre de 2026 — Auditoría y correcciones SEO
 

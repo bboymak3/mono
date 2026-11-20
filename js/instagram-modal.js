@@ -23,7 +23,7 @@
                 '</div><button type="button" class="marcas-close" aria-label="Cerrar"><i class="fas fa-times"></i></button></div>' +
                 '<div class="marcas-body">' +
                     '<div class="ig-perfil">' +
-                        '<div class="ig-avatar"><img src="/images/monarca/volante-m-sport-tapizado-alcantara-en-santiago-servicio-a-domicilio-puente-alto.webp" alt="Mono Cromático en Instagram"></div>' +
+                        '<div class="ig-avatar"><img src="/images/monarca/logo-mono-cromatico-192.webp" alt="Mono Cromático en Instagram"></div>' +
                         '<div><div class="ig-usuario">@tapizadodevolantesensantiago</div>' +
                         '<div class="ig-nombre">Mono Cromático · Tapizado de Volantes</div></div>' +
                     '</div>' +
@@ -69,13 +69,20 @@
         var caja = document.createElement('div');
         caja.className = 'social-flotantes';
         caja.innerHTML =
-            '<a class="tienda-flotante" href="' + URL_TIENDA + '" target="_blank" rel="noopener" aria-label="Ir a la tienda">' +
-                '<i class="fas fa-shopping-bag"></i><span>Tienda</span></a>' +
             '<button type="button" class="social-circulo social-ig" data-open-instagram aria-label="Instagram de Mono Cromático">' +
                 '<i class="fab fa-instagram"></i></button>' +
             '<a class="social-circulo social-google" href="' + URL_GOOGLE + '" target="_blank" rel="noopener" aria-label="Perfil de Google de Mono Cromático">' +
                 '<i class="fab fa-google"></i></a>';
         document.body.appendChild(caja);
+        // "Tienda" va aparte, a la izquierda, justo encima del botón Llamar de la barra inferior
+        var tienda = document.createElement('a');
+        tienda.className = 'tienda-flotante';
+        tienda.href = URL_TIENDA;
+        tienda.target = '_blank';
+        tienda.rel = 'noopener';
+        tienda.setAttribute('aria-label', 'Ir a la tienda');
+        tienda.innerHTML = '<i class="fas fa-shopping-bag"></i><span>Tienda</span>';
+        document.body.appendChild(tienda);
     }
     if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', crearFlotantes);
     else crearFlotantes();

@@ -92,7 +92,12 @@ def atributos_img(html):
         src = re.search(r'\ssrc="([^"]+)"', tag)
         if not src or src.group(1).startswith(('http', 'data:')) or not src.group(1).strip():
             return tag
-        if 'width=' not in tag:
+        clases = re.search(r'\sclass="([^"]*)"', tag)
+        clases = clases.group(1) if clases else ''
+        if re.search(r'(?:^|\s)(?:\w+:)?h-(?:\d|\[)', clases) and not re.search(r'(?:^|\s)(?:\w+:)?w-', clases):
+            # Alto fijo por clase (p. ej. el logo con h-10): width/height lo deformarían
+            tag = re.sub(r'\s(?:width|height)="\d+"', '', tag)
+        elif 'width=' not in tag:
             d = dimensiones(src.group(1))
             if d:
                 tag = tag.replace('<img ', '<img width="%d" height="%d" ' % d, 1)
