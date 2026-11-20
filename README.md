@@ -19,7 +19,7 @@ Cloudflare Pages desde la rama `main`.
 | `css/tailwind.css` | Tailwind compilado (no editar a mano) |
 | `css/ios-layer.css` | Capa visual estilo iOS y estilos de modales, reseñas, GPS, botones flotantes |
 | `js/marcas-modal.js` | Modal "Marcas y Modelos" con carrusel de logos y tarjetas de vehículos |
-| `js/instagram-modal.js` | Modal de Instagram y perfil de Google + botones redondos flotantes |
+| `js/instagram-modal.js` | Modal de Instagram y perfil de Google + botones flotantes (Tienda, Instagram, Google) |
 | `js/gps-modal.js` | Modal de instalación de GPS y seguridad vehicular |
 | `images/marcas/` | Logos SVG de marcas |
 | `scripts/` | Generadores y optimizadores (ver abajo) |
@@ -49,6 +49,10 @@ Datos fijos que conviene tener a mano:
 - Perfil de Google: `https://maps.app.goo.gl/rjAGwm62YevVtvf1A`
 
 ## Historial de cambios
+
+### 20 de noviembre de 2026
+
+- Botón flotante "Tienda" en todas las páginas hacia `https://tienda.optimuscars.cl`.
 
 ### 10 de noviembre de 2026 — Auditoría y correcciones SEO
 
