@@ -431,3 +431,15 @@ section > .veh-marquee { margin: 0; }
 .gps-modalidad strong { display: block; font-size: 0.9rem; }
 .gps-modalidad span { display: block; font-size: 0.75rem; color: #4B5563; margin-top: 2px; }
 .gps-cta { background: #DC2626 !important; color: #fff !important; }
+
+/* Botón flotante "Tienda" (tienda.optimuscars.cl), arriba de Instagram y Google */
+.social-flotantes { align-items: flex-end; }
+.tienda-flotante {
+    display: inline-flex; align-items: center; gap: 8px; height: 54px; padding: 0 20px;
+    border-radius: 9999px; background: #EAB308; color: #000 !important; text-decoration: none;
+    font-weight: 800; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.03em;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35), 0 0 0 3px rgba(234, 179, 8, 0.25);
+    transition: transform 0.25s var(--ios-ease);
+}
+.tienda-flotante:hover { transform: scale(1.06); }
+.tienda-flotante i { font-size: 1.15rem; }

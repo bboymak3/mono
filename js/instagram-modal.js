@@ -1,10 +1,12 @@
 /* Modal de Instagram (@tapizadodevolantesensantiago) — hoja inferior estilo iOS,
    con botones a Instagram y al perfil de Google. También agrega en todas las páginas
    dos botones redondos flotantes: Instagram (abre el modal) y Google (abre el perfil).
+   También agrega el botón flotante "Tienda" hacia tienda.optimuscars.cl.
    Se abre con cualquier elemento [data-open-instagram] o con el enlace #instagram. */
 (function () {
     var URL_IG = 'https://www.instagram.com/tapizadodevolantesensantiago/';
     var URL_GOOGLE = 'https://maps.app.goo.gl/rjAGwm62YevVtvf1A';
+    var URL_TIENDA = 'https://tienda.optimuscars.cl';
     var modal = null, ultimoFoco = null;
 
     function crearModal() {
@@ -67,6 +69,8 @@
         var caja = document.createElement('div');
         caja.className = 'social-flotantes';
         caja.innerHTML =
+            '<a class="tienda-flotante" href="' + URL_TIENDA + '" target="_blank" rel="noopener" aria-label="Ir a la tienda">' +
+                '<i class="fas fa-shopping-bag"></i><span>Tienda</span></a>' +
             '<button type="button" class="social-circulo social-ig" data-open-instagram aria-label="Instagram de Mono Cromático">' +
                 '<i class="fab fa-instagram"></i></button>' +
             '<a class="social-circulo social-google" href="' + URL_GOOGLE + '" target="_blank" rel="noopener" aria-label="Perfil de Google de Mono Cromático">' +
